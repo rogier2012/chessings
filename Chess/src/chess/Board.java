@@ -13,5 +13,7 @@ public class Board {
 	public void aids(){
 		System.out.println("IK HOOR OOK BIJ HET PROGRAMMEERCLUBJE");
 	}
+	
+	//haha
 
 }
