@@ -15,5 +15,8 @@ public class Board {
 	}
 	
 	//haha
+	
+	// DOET IE???:)
+	
 
 }
