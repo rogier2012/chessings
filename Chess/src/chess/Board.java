@@ -9,4 +9,9 @@ public class Board {
 	public void hallo(){
 		System.out.println("Hello");
 	}
+	
+	public void aids(){
+		System.out.println("IK HOOR OOK BIJ HET PROGRAMMEERCLUBJE");
+	}
+
 }
