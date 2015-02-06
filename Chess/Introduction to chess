@@ -8,7 +8,46 @@ Java. Maar voordat wij onze lol gaan opdoen, moeten we eerst vaststellen wat
 nou eigenlijk schaken is.
 
 Men speelt het schaakspel met de volgende regels:
+Je speelt het spel met 2 spelers, lekker makkelijk, en iedere speler doet een 
+zet bij elke beurt.
+
 Er is een speelbord van 32 witte en 32 zwarte tegels in een vierkant (8x8 voor 
 de duidelijkheid). De positie van elke tegel wordt aangegeven door een 
 combinatie van a-h en 1-8. Het spelbord wordt vastgesteld op a1 met een zwarte
 kleur. Vervolgens wordt het elke tegel horizontaal of verticaal omgewisseld.
+
+Iedere speler heeft 16 stukken op het bord staan met een wit of zwarte kleur.
+Al die stukken staan in een bepaalde ordening, de acht pionnen staan een rij
+voor de rest van de stukken. En die bestaan uit...:
+1 KONING
+1 DAME (koningin)
+2 TORENS (kastelen)
+2 LOPERS (raadsheren)
+2 PAARDEN
+en dus die verrekte 8 PIONNEN.
+
+Beide spelers doen om beurten een zet naar keuze, waarbij wit begint (en zwart
+wint)
+
+Nouja nu weet je zo onderhand wel weer waar het om gaat, je mag stukken slaan
+van een ander door je eigen stuk te gebruiken zoals die hoort.
+Een koning mag 1 tegel verplaatsen in alle richtingen.
+Een dame mag het hele bord oversteken in alle richting (OP!, Rito pls nerf)
+Een toren mag het hele bord oversteken maar alleen horizontaal en verticaal
+Een loper mag het hele bord oversteken maar alleen diagonaal.
+Een paard mag horizontaal of verticaal twee opschuiven en dan 1 loodrecht op
+de richting. Een paard mag als enige over andere stukken heen springen.
+Als laatste mag de pion 1 stap vooruit stappen(ri de opponent) behalve het de
+eerste stap van pion is, dan heeft hij de keus om 2 stappen vooruit te doen
+
+Ieder stuk mag slaan wat die kan bereiken in zijn of haar looppad, behalve
+de pion, die mag alleen schuin slaan. 
+
+Dan hebben we nog de en-passantregel, ron...
+Ook mag een pion de overkant bereikt mag die ingewisseld worden voor een ander
+stuk naar keuze, het is ook mogelijk dat er dus twee dames op het bord staan.
+
+
+
+De korte en lange rokade is ook zo iets leuks, ron...
+
