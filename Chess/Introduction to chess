@@ -1,0 +1,14 @@
+Hallo allemaal en welkom bij ons gezamelijk spelletje schaken.
+
+Helaas is er 1 probleem, er is geen spelletje...
+
+Dus in plaats van het spelletje spelen gaan we (ja juist) het spelletje in onze
+vrij tijd programmeren. En hiervoor gebruiken we het magische wapen genaamd
+Java. Maar voordat wij onze lol gaan opdoen, moeten we eerst vaststellen wat 
+nou eigenlijk schaken is.
+
+Men speelt het schaakspel met de volgende regels:
+Er is een speelbord van 32 witte en 32 zwarte tegels in een vierkant (8x8 voor 
+de duidelijkheid). De positie van elke tegel wordt aangegeven door een 
+combinatie van a-h en 1-8. Het spelbord wordt vastgesteld op a1 met een zwarte
+kleur. Vervolgens wordt het elke tegel horizontaal of verticaal omgewisseld.
