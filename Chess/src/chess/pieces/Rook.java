@@ -1,31 +1,19 @@
 package chess.pieces;
 
-import chess.Field;
+import chess.*;
 
-public class Rook implements ChessPiece {
-
-	@Override
-	public Field getPosition() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setPosition() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-		
+public class Rook extends ChessPiece {
+	
+	public Rook(Color color, int i, int j) {
+		super(color, i, j);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public boolean isValidMove() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
+
 
 }
