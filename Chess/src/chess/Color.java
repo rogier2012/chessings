@@ -5,5 +5,5 @@ public enum Color {
 	
 	public Color other()	{
 		return this == WHITE? BLACK:WHITE;
-	} 
+	}
 }
