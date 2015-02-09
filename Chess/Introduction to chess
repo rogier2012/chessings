@@ -3,88 +3,114 @@ Hallo allemaal en welkom bij ons gezamelijk spelletje schaken.
 Helaas is er 1 probleem, er is geen spelletje...
 
 Dus in plaats van het spelletje spelen gaan we (ja juist) het spelletje in onze
-vrij tijd programmeren. En hiervoor gebruiken we het magische wapen genaamd
+vrije tijd programmeren. En hiervoor gebruiken we het magische wapen genaamd
 Java. Maar voordat wij onze lol gaan opdoen, moeten we eerst vaststellen wat 
 nou eigenlijk schaken is.
 
+-- GAMEPLAY -----------------------------------------------------------------------------------------------------------------
+
 Men speelt het schaakspel met de volgende regels:
-Je speelt het spel met 2 spelers, lekker makkelijk, en iedere speler doet een 
-zet bij elke beurt.
+Je speelt het spel met 2 spelers en iedere speler doet een zet bij elke beurt. Het spel gaat door tot een koning schaakmat staat,
+een speler opgeeft of door een gelijkspel.
+
+ -- INITIAL SETUP -----------------------------------------------------------------------------------------------------------
 
 Er is een speelbord van 32 witte en 32 zwarte tegels in een vierkant (8x8 voor 
-de duidelijkheid). De positie van elke tegel wordt aangegeven door een 
-combinatie van a-h en 1-8. Het spelbord wordt vastgesteld op a1 met een zwarte
+de duidelijkheid). Rijen heten officieel "ranks" en kolommen "files".
+De positie van elke tegel wordt aangegeven door een 
+combinatie van a-h (file nr) en 1-8 (rank nr). Het spelbord wordt vastgesteld op a1 met een zwarte
 kleur. Vervolgens wordt het elke tegel horizontaal of verticaal omgewisseld.
 
 Iedere speler heeft 16 stukken op het bord staan met een wit of zwarte kleur.
+
+1 KING (koning)
+1 QUEEN (koningin)
+2 ROOKS (toren)
+2 BISHOPS (lopers)
+2 KNIGHTS (paard)
+8 PAWNS	(pion)
+
 Al die stukken staan in een bepaalde ordening, de acht pionnen staan een rij
-voor de rest van de stukken. En die bestaan uit...:
-1 KONING
-1 DAME (koningin)
-2 TORENS (kastelen)
-2 LOPERS (raadsheren)
-2 PAARDEN
-en dus die verrekte 8 PIONNEN!
+voor de rest van de stukken. Deze rij heeft de volgende opstelling:
 
-Beide spelers doen om beurten een zet naar keuze, waarbij wit begint (en zwart
-wint (haha...))
+ROOK - KNIGHT - BISHOP - QUEEN - KING - BISHOP - KNIGHT - ROOK
 
-Nouja nu weet je zo onderhand wel weer waar het om gaat, je mag stukken slaan
-van een ander door je eigen stuk te gebruiken zoals die hoort.
-Een koning mag 1 tegel verplaatsen in alle richtingen.
+Dit geldt echter alleen voor wit. De koningin van beide partijen moet op haar eigen kleur 
+vakje beginnen. Voor zwart geldt dus:
+
+ROOK - KNIGHT - BISHOP - KING - QUEEN - BISHOP - KNIGHT - ROOK
+
+-- MOVEMENT ------------------------------------------------------------------------------------------------------------------
+
+Alle soorten stukken hebben hun eigen mogelijke zetten en manieren om andere stukken te slaan. Het
+is alleen voor het paard toegestaan om over andere stukken te bewegen. Andere stukken kunnen niet 
+door elkaar heen. Ieder stuk mag slaan wat die kan bereiken in zijn of haar looppad, behalve
+de pion, die mag alleen diagonaal slaan (met uitzondering op de en-passant regel). 
+
+Een koning mag 1 tegel verplaatsen in alle richtingen. (horizontaal, verticaal en diagonaal)
 Een dame mag het hele bord oversteken in alle richting (OP!, Rito pls nerf)
 Een toren mag het hele bord oversteken maar alleen horizontaal en verticaal
 Een loper mag het hele bord oversteken maar alleen diagonaal.
 Een paard mag horizontaal of verticaal twee opschuiven en dan 1 loodrecht op
 de richting. Een paard mag als enige over andere stukken heen springen.
-Als laatste mag de pion 1 stap vooruit stappen(ri de opponent) behalve het de
-eerste stap van pion is, dan heeft hij de keus om 2 stappen vooruit te doen
+Als laatste mag de pion 1 stap vooruit stappen(richting de tegenstander) behalve als het de
+eerste stap van pion is, dan heeft hij de keus om 2 stappen vooruit te doen.
 
-Ieder stuk mag slaan wat die kan bereiken in zijn of haar looppad, behalve
-de pion, die mag alleen schuin slaan. 
+De koning staat schaak wanneer een stuk van de tegenstander zo gezet wordt dat de koning bij de 
+volgende zet geslagen zou kunnen worden. Het is niet toegestaan om je eigen koning schaak te zetten.
+Als een koning schaak gezet wordt is de verdedigende speler dus verplicht om schaak te verhelpen.
 
-Dan hebben we nog de en-passantregel, ron...
+Castling (rokade):
+De speler heeft de mogelijkheid een rokade te doen als de volgende vereisden worden voldaan:
+- De koning en een toren zijn beide niet bewogen. 
+- Er staan geen stukken tussen de koning en genoemde toren. 
+- De koning staat niet schaak.
+- De koning komt door deze zet niet schaak te staan.
 
-De en-passantregel geldt alleen voor pionnen en alleen als: 
-(Voor de duidelijkheid gebruiken we hier zwart en wit voor de verschillende pionnen)
-- de witte pion nog niet is verplaatst;
-- de witte pion 2 stappen doet als eerste zet;
-- de witte pion naast een zwarte pion uitkomt.
-De zwarte pion mag op dit moment op het vlak gaan staan waar de witte pion overheen is gesprongen, dus zwart gaat schuin naar voren.
-En wit verliest zijn pion. Dit is ook te zien als dat wit in plaats van twee, maar 1 vak naar voren gaat en zwart dus op een normale manier kon slaan.
+Hierbij wordt zowel de koning als de toren verplaatst. Aangezien de afstand tussen beide torens en
+de koning niet gelijk is spreekt men van een korte of lange rokade.
 
-Ook mag een pion die de overkant heeft bereikt ingewisseld worden voor een ander
-stuk naar keuze, het is ook mogelijk dat er dus twee dames op het bord staan.
+-Lange rokade:
+Beginpositie:
+ROOK - EMPTY - EMPTY - EMPTY - KING - WHATEVER - WHATEVER - WHATEVER
+Eindpositie:
+EMPTY - EMPTY - KING - ROOK - EMPTY - WHATEVER - WHATEVER - WHATEVER
 
+-Korte rokade:
+Beginpositie:
+ROOK - EMPTY - EMPTY - KING - WHATEVER - WHATEVER - WHATEVER - WHATEVER
+Eindpositie:
+EMPTY - KING - ROOK - EMPTY - WHATEVER - WHATEVER - WHATEVER - WHATEVER
 
+En-Passant:
+Wanneer een pion twee stappen vooruit doet en de tegenstander een pion heeft direct naast de resulterende
+positie heeft de tegenstander de mogelijkheid en-passant te slaan. De pion zal dan slaan alsof de pion maar
+een stap vooruit heeft gedaan. Deze zet is alleen mogelijk in de eerste zet nadat de pion twee stappen vooruit deed.
 
-De korte en lange rokade is ook zo iets leuks, ron...
+Promotion:
+Een pion die de overkant van het bord bereikt mag worden ingewisseld voor elk ander stuk (behalve koning). Hierdoor is het 
+bijvoorbeeld mogelijk twee koninginnen te hebben.
 
-De rokade mag niet worden uitgevoerd als:
+-- END OF THE GAME ----------------------------------------------------------------------------------------------------------------
 
-- er al een zet met de koning gedaan is,
-- er al een zet met de betrokken toren is gedaan,
-- er een stuk tussen de koning en de betrokken toren staat (het is dus niet mogelijk met de rokade een stuk te slaan),
-- de koning schaak staat,
-- de koning tijdens het rokeren (uitvoeren van de rokade) een veld passeert dat door een vijandelijk stuk bestreken wordt,
-- het resultaat zou zijn dat de koning na de rokade schaak komt te staan (maar dat spreekt vanzelf).
+Checkmate (Schaakmat):
+Er is sprake van schaakmat als de speler geen zetten meer kan doen om zijn/haar koning uit schaak te halen.
 
-De rokade is niet verboden als:
-- de koning al eens schaak heeft gestaan en dat schaak is opgeheven zonder een zet met de koning te doen
-- de toren staat aangevallen.
+Resign:
+Een speler mag op elk moment van het spel opgeven. De tegenstander wint dan. 
 
-Het verschil tussen een lange en een korte rokade is de afstand die de koning af moet leggen, naar links of naar rechts. De regels
-zijn voor beide rokades hetzelfde.
+Draw:
+Het spel kan op meerdere manieren in een gelijkspel eindigen.
 
-Goed, nu we de regels vastgesteld hebben kunnen we beginnen met modeleren.
+- Beide spelers hebben niet genoeg stukken om de andere speler schaakmat te zetten. Dit gebeurt in de volgende situaties:
+	*Koning tegen koning
+	*Koning tegen koning en paard
+	*Koning tegen koning en loper
+	*Koning en loper tegen koning en loper, waarbij beide lopers op dezelfde kleur tegels staan.
+- Beide spelers besluiten op een gelijkspel
+- Een speler staat niet schaak maar heeft geen legale zetten om te doen. Dit heet ook wel stalemate.
 
-We hebben te maken met meerdere stukken die op het bord kunnen spelen dus het lijkt dan slim om een interface te maken genaamd: ChessPiece
-
-Dan maken we classen genaamd: 
-Pawn implements ChessPiece
-Knight (paard) implements ChessPiece
-Queen ...
-Bishop (lopers) ...
-Rook (toren) ...
-King ...
-
+Ook zijn er situaties waar de persoon aan zet mag bepalen of het spel in gelijkspel eindigt of niet:
+	* 50 zetten zijn er geen stukken geslagen of geen pionnen verzet
+	* 3 opeenvolgende zetten van dezelfde speler resulteerden in hetzelfde bordposities. Alle stukken moeten ook dezelfde
+	  mogelijke moves hebben (dus ook en-passant en castling).
