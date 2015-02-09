@@ -45,7 +45,12 @@ de pion, die mag alleen schuin slaan.
 
 Dan hebben we nog de en-passantregel, ron...
 
-Ook mag een pion de overkant bereikt mag die ingewisseld worden voor een ander
+De en-passantregel geldt alleen voor pionnen en alleen als:
+- de pion nog niet is verplaatst
+- de pion 2 stappen doet als eerste zet
+- de pion naast een vijandige pion uitkomt.
+
+Ook mag een pion die de overkant heeft bereikt ingewisseld worden voor een ander
 stuk naar keuze, het is ook mogelijk dat er dus twee dames op het bord staan.
 
 
