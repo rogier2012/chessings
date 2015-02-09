@@ -1,25 +1,11 @@
 package chess.pieces;
 
-import chess.Field;
+import chess.*;
 
-public class Bishop implements ChessPiece {
-
-	@Override
-	public Field getPosition() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setPosition() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-		
+public class Bishop extends ChessPiece {
+	
+	public Bishop(Color color, int i, int j){
+		super(color,i,j);
 	}
 
 	@Override
@@ -27,5 +13,7 @@ public class Bishop implements ChessPiece {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	
 
 }

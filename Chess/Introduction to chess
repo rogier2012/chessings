@@ -34,6 +34,9 @@ Iedere speler heeft 16 stukken op het bord staan met een wit of zwarte kleur.
 2 KNIGHTS (paard)
 8 PAWNS	(pion)
 
+Elk stuk implementeert de abstract class ChessPiece.
+Een ChessPiece kan zijn positie opvragen, zichzelf verzetten en zn eigen regels defineren.
+
 Al die stukken staan in een bepaalde ordening, de acht pionnen staan een rij
 voor de rest van de stukken. Deze rij heeft de volgende opstelling:
 

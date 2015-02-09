@@ -1,25 +1,12 @@
 package chess.pieces;
 
-import chess.Field;
+import chess.*;
 
-public class King implements ChessPiece {
+public class King extends ChessPiece {
 
-	@Override
-	public Field getPosition() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setPosition() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-		
+	public King(Color color, int i, int j) {
+		super(color, i, j);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -27,5 +14,6 @@ public class King implements ChessPiece {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
 
 }
