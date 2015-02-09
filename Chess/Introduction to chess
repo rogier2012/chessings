@@ -45,10 +45,13 @@ de pion, die mag alleen schuin slaan.
 
 Dan hebben we nog de en-passantregel, ron...
 
-De en-passantregel geldt alleen voor pionnen en alleen als:
-- de pion nog niet is verplaatst
-- de pion 2 stappen doet als eerste zet
-- de pion naast een vijandige pion uitkomt.
+De en-passantregel geldt alleen voor pionnen en alleen als: 
+(Voor de duidelijkheid gebruiken we hier zwart en wit voor de verschillende pionnen)
+- de witte pion nog niet is verplaatst;
+- de witte pion 2 stappen doet als eerste zet;
+- de witte pion naast een zwarte pion uitkomt.
+De zwarte pion mag op dit moment op het vlak gaan staan waar de witte pion overheen is gesprongen, dus zwart gaat schuin naar voren.
+En wit verliest zijn pion. Dit is ook te zien als dat wit in plaats van twee, maar 1 vak naar voren gaat en zwart dus op een normale manier kon slaan.
 
 Ook mag een pion die de overkant heeft bereikt ingewisseld worden voor een ander
 stuk naar keuze, het is ook mogelijk dat er dus twee dames op het bord staan.
@@ -57,6 +60,21 @@ stuk naar keuze, het is ook mogelijk dat er dus twee dames op het bord staan.
 
 De korte en lange rokade is ook zo iets leuks, ron...
 
+De rokade mag niet worden uitgevoerd als:
+
+- er al een zet met de koning gedaan is,
+- er al een zet met de betrokken toren is gedaan,
+- er een stuk tussen de koning en de betrokken toren staat (het is dus niet mogelijk met de rokade een stuk te slaan),
+- de koning schaak staat,
+- de koning tijdens het rokeren (uitvoeren van de rokade) een veld passeert dat door een vijandelijk stuk bestreken wordt,
+- het resultaat zou zijn dat de koning na de rokade schaak komt te staan (maar dat spreekt vanzelf).
+
+De rokade is niet verboden als:
+- de koning al eens schaak heeft gestaan en dat schaak is opgeheven zonder een zet met de koning te doen
+- de toren staat aangevallen.
+
+Het verschil tussen een lange en een korte rokade is de afstand die de koning af moet leggen, naar links of naar rechts. De regels
+zijn voor beide rokades hetzelfde.
 
 Goed, nu we de regels vastgesteld hebben kunnen we beginnen met modeleren.
 
