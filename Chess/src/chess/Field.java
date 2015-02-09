@@ -17,4 +17,12 @@ public class Field {
 	public void setColor(Color color) {
 		this.color = color;
 	}
+
+	public ChessPiece getPiece() {
+		return piece;
+	}
+
+	public void setPiece(ChessPiece piece) {
+		this.piece = piece;
+	}
 }
