@@ -17,9 +17,12 @@ een speler opgeeft of door een gelijkspel.
 
 Er is een speelbord van 32 witte en 32 zwarte tegels in een vierkant (8x8 voor 
 de duidelijkheid). Rijen heten officieel "ranks" en kolommen "files".
+ -- Een implementatie hiervan kan zijn: Board met fields[][] ChessPieces.
 De positie van elke tegel wordt aangegeven door een 
 combinatie van a-h (file nr) en 1-8 (rank nr). Het spelbord wordt vastgesteld op a1 met een zwarte
-kleur. Vervolgens wordt het elke tegel horizontaal of verticaal omgewisseld.
+kleur.
+-- Gaan we dat aangeven? hoe handig is dat?
+ Vervolgens wordt het elke tegel horizontaal of verticaal omgewisseld.
 
 Iedere speler heeft 16 stukken op het bord staan met een wit of zwarte kleur.
 
