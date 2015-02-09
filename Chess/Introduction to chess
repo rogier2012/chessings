@@ -1,0 +1,90 @@
+Hallo allemaal en welkom bij ons gezamelijk spelletje schaken.
+
+Helaas is er 1 probleem, er is geen spelletje...
+
+Dus in plaats van het spelletje spelen gaan we (ja juist) het spelletje in onze
+vrij tijd programmeren. En hiervoor gebruiken we het magische wapen genaamd
+Java. Maar voordat wij onze lol gaan opdoen, moeten we eerst vaststellen wat 
+nou eigenlijk schaken is.
+
+Men speelt het schaakspel met de volgende regels:
+Je speelt het spel met 2 spelers, lekker makkelijk, en iedere speler doet een 
+zet bij elke beurt.
+
+Er is een speelbord van 32 witte en 32 zwarte tegels in een vierkant (8x8 voor 
+de duidelijkheid). De positie van elke tegel wordt aangegeven door een 
+combinatie van a-h en 1-8. Het spelbord wordt vastgesteld op a1 met een zwarte
+kleur. Vervolgens wordt het elke tegel horizontaal of verticaal omgewisseld.
+
+Iedere speler heeft 16 stukken op het bord staan met een wit of zwarte kleur.
+Al die stukken staan in een bepaalde ordening, de acht pionnen staan een rij
+voor de rest van de stukken. En die bestaan uit...:
+1 KONING
+1 DAME (koningin)
+2 TORENS (kastelen)
+2 LOPERS (raadsheren)
+2 PAARDEN
+en dus die verrekte 8 PIONNEN!
+
+Beide spelers doen om beurten een zet naar keuze, waarbij wit begint (en zwart
+wint)
+
+Nouja nu weet je zo onderhand wel weer waar het om gaat, je mag stukken slaan
+van een ander door je eigen stuk te gebruiken zoals die hoort.
+Een koning mag 1 tegel verplaatsen in alle richtingen.
+Een dame mag het hele bord oversteken in alle richting (OP!, Rito pls nerf)
+Een toren mag het hele bord oversteken maar alleen horizontaal en verticaal
+Een loper mag het hele bord oversteken maar alleen diagonaal.
+Een paard mag horizontaal of verticaal twee opschuiven en dan 1 loodrecht op
+de richting. Een paard mag als enige over andere stukken heen springen.
+Als laatste mag de pion 1 stap vooruit stappen(ri de opponent) behalve het de
+eerste stap van pion is, dan heeft hij de keus om 2 stappen vooruit te doen
+
+Ieder stuk mag slaan wat die kan bereiken in zijn of haar looppad, behalve
+de pion, die mag alleen schuin slaan. 
+
+Dan hebben we nog de en-passantregel, ron...
+
+De en-passantregel geldt alleen voor pionnen en alleen als: 
+(Voor de duidelijkheid gebruiken we hier zwart en wit voor de verschillende pionnen)
+- de witte pion nog niet is verplaatst;
+- de witte pion 2 stappen doet als eerste zet;
+- de witte pion naast een zwarte pion uitkomt.
+De zwarte pion mag op dit moment op het vlak gaan staan waar de witte pion overheen is gesprongen, dus zwart gaat schuin naar voren.
+En wit verliest zijn pion. Dit is ook te zien als dat wit in plaats van twee, maar 1 vak naar voren gaat en zwart dus op een normale manier kon slaan.
+
+Ook mag een pion die de overkant heeft bereikt ingewisseld worden voor een ander
+stuk naar keuze, het is ook mogelijk dat er dus twee dames op het bord staan.
+
+
+
+De korte en lange rokade is ook zo iets leuks, ron...
+
+De rokade mag niet worden uitgevoerd als:
+
+- er al een zet met de koning gedaan is,
+- er al een zet met de betrokken toren is gedaan,
+- er een stuk tussen de koning en de betrokken toren staat (het is dus niet mogelijk met de rokade een stuk te slaan),
+- de koning schaak staat,
+- de koning tijdens het rokeren (uitvoeren van de rokade) een veld passeert dat door een vijandelijk stuk bestreken wordt,
+- het resultaat zou zijn dat de koning na de rokade schaak komt te staan (maar dat spreekt vanzelf).
+
+De rokade is niet verboden als:
+- de koning al eens schaak heeft gestaan en dat schaak is opgeheven zonder een zet met de koning te doen
+- de toren staat aangevallen.
+
+Het verschil tussen een lange en een korte rokade is de afstand die de koning af moet leggen, naar links of naar rechts. De regels
+zijn voor beide rokades hetzelfde.
+
+Goed, nu we de regels vastgesteld hebben kunnen we beginnen met modeleren.
+
+We hebben te maken met meerdere stukken die op het bord kunnen spelen dus het lijkt dan slim om een interface te maken genaamd: ChessPiece
+
+Dan maken we classen genaamd: 
+Pawn implements ChessPiece
+Knight (paard) implements ChessPiece
+Queen ...
+Bishop (lopers) ...
+Rook (toren) ...
+King ...
+
