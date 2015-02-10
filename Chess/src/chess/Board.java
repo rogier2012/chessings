@@ -48,23 +48,23 @@ public class Board {
 		
 		// Reset black
 		for (int file = 0; file < FILES; file++)	{
-			fields[5][file].setPiece(new Pawn(Color.BLACK, file, 1));
+			fields[6][file].setPiece(new Pawn(Color.BLACK, file, 1));
 		}
 		for (int file = 0; file < FILES; file++)	{ 
 			if (file == 0 || file == 7)	{
-				fields[6][file].setPiece(new Rook(Color.BLACK, file, 0));
+				fields[7][file].setPiece(new Rook(Color.BLACK, file, 0));
 			}
 			if (file == 1 || file == 6)	{
-				fields[6][file].setPiece(new Knight(Color.BLACK,file, 0));
+				fields[7][file].setPiece(new Knight(Color.BLACK,file, 0));
 			}
 			if (file == 2 || file == 5)	{
-				fields[6][file].setPiece(new Bishop(Color.BLACK, file, 0));
+				fields[7][file].setPiece(new Bishop(Color.BLACK, file, 0));
 			}
 			if (file == 3)	{
-				fields[6][file].setPiece(new Queen(Color.BLACK, file, 0));
+				fields[7][file].setPiece(new Queen(Color.BLACK, file, 0));
 			}
 			if (file == 4)	{
-				fields[6][file].setPiece(new King(Color.BLACK, file, 0));
+				fields[7][file].setPiece(new King(Color.BLACK, file, 0));
 			}
 		}
 	}
