@@ -26,8 +26,8 @@ public abstract class ChessPiece {
 	}
 
 	public void move(int i, int j, Board board) {
-		if ((board.getField(i, j).getPiece() instanceof Empty || board
-				.getField(i, j).getPiece.getColor == this.color.other())
+		if ((board.getField(i, j).getPiece().equals(null) || board
+				.getField(i, j).getPiece().getColor() == this.color.other())
 				&& this.isValidMove()) {
 			this.setPosition(i, j, board);
 		} else {
