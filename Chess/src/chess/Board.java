@@ -77,6 +77,10 @@ public class Board {
 		return file >= 0 && file < FILES;
 	}
 	
+	public boolean isWithinBoard(int rank, int file)	{
+		return isValidRank(rank) && isValidFile(file);
+	}
+	
 	public Field getField(int rank, int file)	{
 		return this.fields[rank][file];
 	}
