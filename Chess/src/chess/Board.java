@@ -69,6 +69,14 @@ public class Board {
 		}
 	}
 
+	public boolean isValidRank(int rank)	{
+		return rank >= 0 && rank < RANKS;
+	}
+	
+	public boolean isValidFile(int file)	{
+		return file >= 0 && file < FILES;
+	}
+	
 	public Field getField(int rank, int file)	{
 		return this.fields[rank][file];
 	}
