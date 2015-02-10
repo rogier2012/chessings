@@ -73,7 +73,7 @@ public class Board {
 		return rank >= 0 && rank < RANKS;
 	}
 	
-	public boolean isValidFile(int file)	{
+	public boolean isValidFile(int file)	{ 
 		return file >= 0 && file < FILES;
 	}
 	
