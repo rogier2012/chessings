@@ -50,7 +50,7 @@ public class Board {
 		for (int file = 0; file < FILES; file++)	{
 			fields[5][file].setPiece(new Pawn(Color.BLACK, file, 1));
 		}
-		for (int file = 0; file < FILES; file++)	{
+		for (int file = 0; file < FILES; file++)	{ 
 			if (file == 0 || file == 7)	{
 				fields[6][file].setPiece(new Rook(Color.BLACK, file, 0));
 			}
