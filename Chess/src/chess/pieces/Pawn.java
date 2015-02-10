@@ -12,7 +12,6 @@ public class Pawn extends ChessPiece {
 
 	public Pawn(Color color, int i, int j) {
 		super(color, i, j);
-		// TODO Auto-generated constructor stub
 	}
 
 

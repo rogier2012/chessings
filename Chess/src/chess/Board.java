@@ -26,45 +26,45 @@ public class Board {
 		
 		// Reset white
 		for (int file = 0; file < FILES; file++)	{
-			fields[1][file].setPiece(new Pawn(Color.WHITE));
+			fields[1][file].setPiece(new Pawn(Color.WHITE, file, 1));
 		}
 		for (int file = 0; file < FILES; file++)	{
 			if (file == 0 || file == 7)	{
-				fields[0][file].setPiece(new Rook(Color.WHITE));
+				fields[0][file].setPiece(new Rook(Color.WHITE, file, 0));
 			}
 			if (file == 1 || file == 6)	{
-				fields[0][file].setPiece(new Knight(Color.WHITE));
+				fields[0][file].setPiece(new Knight(Color.WHITE, file, 0));
 			}
 			if (file == 2 || file == 5)	{
-				fields[0][file].setPiece(new Bishop(Color.WHITE));
+				fields[0][file].setPiece(new Bishop(Color.WHITE, file, 0));
 			}
 			if (file == 3)	{
-				fields[0][file].setPiece(new Queen(Color.WHITE));
+				fields[0][file].setPiece(new Queen(Color.WHITE, file, 0));
 			}
 			if (file == 4)	{
-				fields[0][file].setPiece(new King(Color.WHITE));
+				fields[0][file].setPiece(new King(Color.WHITE, file, 0));
 			}
 		}
 		
 		// Reset black
 		for (int file = 0; file < FILES; file++)	{
-			fields[5][file].setPiece(new Pawn(Color.BLACK));
+			fields[5][file].setPiece(new Pawn(Color.BLACK, file, 1));
 		}
 		for (int file = 0; file < FILES; file++)	{
 			if (file == 0 || file == 7)	{
-				fields[6][file].setPiece(new Rook(Color.BLACK));
+				fields[6][file].setPiece(new Rook(Color.BLACK, file, 0));
 			}
 			if (file == 1 || file == 6)	{
-				fields[6][file].setPiece(new Knight(Color.BLACK));
+				fields[6][file].setPiece(new Knight(Color.BLACK,file, 0));
 			}
 			if (file == 2 || file == 5)	{
-				fields[6][file].setPiece(new Bishop(Color.BLACK));
+				fields[6][file].setPiece(new Bishop(Color.BLACK, file, 0));
 			}
 			if (file == 3)	{
-				fields[6][file].setPiece(new Queen(Color.BLACK));
+				fields[6][file].setPiece(new Queen(Color.BLACK, file, 0));
 			}
 			if (file == 4)	{
-				fields[6][file].setPiece(new King(Color.BLACK));
+				fields[6][file].setPiece(new King(Color.BLACK, file, 0));
 			}
 		}
 	}
