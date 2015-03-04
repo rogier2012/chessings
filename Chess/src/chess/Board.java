@@ -11,9 +11,9 @@ public class Board {
 	 * Constants
 	 */
 	
-	public static final int FILES = 8;
-	public static final int RANKS = 8;
-	private Field[][] fields;
+	private static final int FILES = 8;
+	private static final int RANKS = 8;
+	public Field[][] fields;
 
 	
 	/*
@@ -31,8 +31,11 @@ public class Board {
 		for (int rank = 0; rank < RANKS; rank++) {
 			color = color.other();
 			for (int file = 0; file < FILES; file++) {
-				fields[rank][file].setColor(color);
+				fields[rank][file] = new Field(color);
 				color = color.other();
+				
+				System.out.println("color: " + color);
+				System.out.println("fields: " + fields[rank][file]);
 			}
 		}
 
@@ -115,6 +118,7 @@ public class Board {
 			}
 		}
 	}
+	
 	
 	// print current state of the chess board
 	public void printBoard() {
