@@ -9,8 +9,7 @@ public abstract class ChessPiece {
 
 	public ChessPiece(Color color, int rank, int file){
 		this.color = color;
-		this.position.setRank(rank);
-		this.position.setFile(file);
+		position = new Position(rank, file);
 	}
 	
 	

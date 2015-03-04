@@ -132,7 +132,12 @@ public class Board {
 		for (int i = 0; i < RANKS; i++) {
 			String row = "";
 			for (int j = 0; j < FILES; j++) {
-				row = row + " " + fields[i][j].getPiece().toString() + fields[i][j].getPiece() + " ";
+				if (fields[i][j].getPiece().equals(null)) {
+					row = row + " " + "   " + " ";
+				} else {
+					row = row + " " + fields[i][j].getPiece().toString() + fields[i][j].getPiece() + " ";
+				}
+		
 				if (j < FILES - 1) {
 					row = row + "|";
 				}
