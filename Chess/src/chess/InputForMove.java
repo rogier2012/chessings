@@ -3,6 +3,10 @@ package chess;
 import java.io.*;
 
 public class InputForMove {
+	public InputForMove(){
+		this.input();
+	}
+	
 	public Position[] input(){
 		Position[] move = new Position[2];
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
