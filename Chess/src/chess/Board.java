@@ -13,7 +13,6 @@ public class Board {
 	
 	public static final int FILES = 8;
 	public static final int RANKS = 8;
-
 	
 	/*
 	 * Instance variables
@@ -36,12 +35,10 @@ public class Board {
 			}
 		}
 
-		
 		// Create Pieces
 
 		this.reset();
 	}
-
 	
 	public void reset(){
 		
