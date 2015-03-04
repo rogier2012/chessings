@@ -25,4 +25,8 @@ public class Field {
 	public void setPiece(ChessPiece piece) {
 		this.piece = piece;
 	}
+	
+	public void clear()	{
+		this.piece = null;
+	}
 }
