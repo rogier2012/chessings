@@ -3,6 +3,7 @@ package chess.pieces;
 import chess.*;
 
 public class Pawn extends ChessPiece {
+	private boolean firstMoveMade;
 
 	@Override
 	public boolean isValidMove() {
@@ -12,6 +13,7 @@ public class Pawn extends ChessPiece {
 
 	public Pawn(Color color, int rank, int file) {
 		super(color, rank, file);
+		firstMoveMade = false;
 	}
 
 

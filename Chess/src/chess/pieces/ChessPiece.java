@@ -5,6 +5,7 @@ import chess.*;
 public abstract class ChessPiece {
 	private Color color;
 	private int[] position;
+	
 
 	public ChessPiece(Color color, int rank, int file){
 		this.color = color;

@@ -4,15 +4,20 @@ import chess.*;
 
 public class Rook extends ChessPiece {
 	
+	private boolean firstMoveMade;
+	
 	public Rook(Color color, int rank, int file) {
 		super(color, rank, file);
-		// TODO Auto-generated constructor stub
+		firstMoveMade = false;
 	}
 
-	@Override
 	public boolean isValidMove() {
 		// TODO Auto-generated method stub
 		return true;
+	}
+	
+	public void setFirstMoveMade() {
+		firstMoveMade = true;
 	}
 
 
