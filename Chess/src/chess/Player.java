@@ -22,7 +22,7 @@ public abstract class Player {
 	 * Queries
 	 */
 	
-    public abstract Position determineMove(Board board);
+    public abstract Move determineMove(Board board);
 	
 	/*
 	 * Commands
@@ -30,7 +30,7 @@ public abstract class Player {
     
     public void makeMove(Board board)	{
     	
-    	
+    	Move keuze = determineMove(board);
     	
     	
     }
