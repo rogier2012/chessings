@@ -12,7 +12,7 @@ public class Board {
 
 	public static final int FILES = 8;
 	public static final int RANKS = 8;
-	public static final String LINE = "\n---+----------+----------+----------+----------+----------+----------+----------+----------";
+	public static final String LINE = "---+----------+----------+----------+----------+----------+----------+----------+----------";
 
 	private static final String NUMBERINGFILES = "        A     |    B     |    C     |    D     |    E     |     F    |     G    |     H  "
 			+ "" + "\n" + "\n";
@@ -36,9 +36,6 @@ public class Board {
 			for (int file = 0; file < FILES; file++) {
 				fields[rank][file] = new Field(color);
 				color = color.other();
-
-				System.out.println("color: " + color);
-				System.out.println("fields: " + fields[rank][file]);
 			}
 		}
 
@@ -119,10 +116,7 @@ public class Board {
 						RANKS - 1, file));
 			}
 		}
-
-		System.out.println("\n\nBoard setup complete");
-		System.out.println("Current board: \n\n");
-		System.out.println(printBoard());
+		System.out.println("\n" + printBoard());
 	}
 
 	// print current state of the chess board
@@ -155,7 +149,7 @@ public class Board {
 					}
 				}
 			}
-			s += row + "\n" + LINE + "\n" + "\n";
+			s += row + "\n" + "\n" + LINE + "\n" + "\n";
 		}
 		s = NUMBERINGFILES + s;
 		return s;
