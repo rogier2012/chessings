@@ -14,7 +14,7 @@ public class Queen extends ChessPiece {
 	}
 
 	public String toString() {
-		return "Queen";
+		return "Queen  ";
 	}
 	
 

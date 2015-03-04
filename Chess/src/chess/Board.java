@@ -12,11 +12,11 @@ public class Board {
 
 	public static final int FILES = 8;
 	public static final int RANKS = 8;
-	public static final String LINE = "\n---+---------+----------+----------+---------+--------+----------+----------+----------";
-	
-	private static final String NUMBERINGFILES = "        A    |    B     |    C     |    D    |    E   |    F     |    G     |     H  "
+	public static final String LINE = "\n---+----------+----------+----------+----------+----------+----------+----------+----------";
+
+	private static final String NUMBERINGFILES = "        A     |    B     |    C     |    D     |    E     |     F    |     G    |     H  "
 			+ "" + "\n" + "\n";
-	
+
 	private static final String NUMBERINGRANKS = "  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  "
 			+ "" + "\n" + "\n";
 	/*
@@ -139,27 +139,20 @@ public class Board {
 			for (int j = 0; j < FILES; j++) {
 				if (fields[i][j].getPiece() == null) {
 					if (insertRowCounter) {
-						row = rowCounter-- + row + " |         ";
+						row = rowCounter-- + row + "  |          ";
 						insertRowCounter = false;
 					} else {
-						row = row + " |           ";
+						row = row + "|          ";
 					}
 				} else {
 					if (insertRowCounter) {
-						row = rowCounter-- + row + " "
-								+ fields[i][j].getColor() + "-"
-								+ fields[i][j].getPiece() + " ";
+						row = rowCounter-- + "  " + row + fields[i][j].getPiece().getColor()
+								+ "-" + fields[i][j].getPiece();
 						insertRowCounter = false;
 					} else {
-						row = row + " " + fields[i][j].getColor() + "-"
-								+ fields[i][j].getPiece() + " ";
+						row = row + fields[i][j].getPiece().getColor() + "-"
+								+ fields[i][j].getPiece();
 					}
-					row = row + " " + fields[i][j].getPiece().toString()
-							+ fields[i][j].getPiece() + " ";
-				}
-
-				if (j < FILES - 1) {
-					row = row + "|";
 				}
 			}
 			s += row + "\n" + LINE + "\n" + "\n";
