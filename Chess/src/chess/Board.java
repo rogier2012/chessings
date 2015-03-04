@@ -114,6 +114,8 @@ public class Board {
 						RANKS - 1, file));
 			}
 		}
+		
+		System.out.println("Board setup complete");
 	}
 	
 	
