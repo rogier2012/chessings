@@ -14,6 +14,10 @@ public class King extends ChessPiece {
 	public boolean isValidMove() {
 		return false;
 	}
+	
+	public String toString() {
+		return "King";
+	}
 
 
 }

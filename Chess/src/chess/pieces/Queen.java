@@ -13,6 +13,9 @@ public class Queen extends ChessPiece {
 		return false;
 	}
 
+	public String toString() {
+		return "Queen";
+	}
 	
 
 }

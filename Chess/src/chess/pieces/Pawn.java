@@ -16,5 +16,8 @@ public class Pawn extends ChessPiece {
 		firstMoveMade = false;
 	}
 
+	public String toString() {
+		return "Pawn";
+	}
 
 }

@@ -12,7 +12,10 @@ public class Bishop extends ChessPiece {
 	public boolean isValidMove() {
 		return false;
 	}
-
+	
+	public String toString() {
+		return "Bishop";
+	}
 	
 
 }
