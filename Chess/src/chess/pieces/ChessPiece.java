@@ -13,6 +13,20 @@ public abstract class ChessPiece {
 		this.position.setFile(file);
 	}
 	
+	
+	public String toString() {
+		String toReturn;
+		if (color.equals(Color.WHITE)) {
+			toReturn = "W";
+		} else if (color.equals(Color.BLACK)) {
+			toReturn = "B";
+		} else {
+			toReturn = "Unknown!";
+		}
+
+		return toReturn;
+	}
+	
 	public Field getPosition() {
 		return null;
 	}

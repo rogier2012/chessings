@@ -13,7 +13,11 @@ public class Board {
 
 	public static final int FILES = 8;
 	public static final int RANKS = 8;
-
+	public static final String LINE = "-------------------------";
+	private static final String NUMBERINGRANKS = "  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  " + ""
+		  	+ "\n" + "\n";
+	private static final String NUMBERINGFILES = "  A  |  B  |  C  |  D  |  E  |  F  |  G  |  H  |  " + ""
+		  	+ "\n" + "\n";
 	
 	/*
 	 * Instance variables
@@ -92,6 +96,7 @@ public class Board {
 			fields[RANKS - 2][file].setPiece(pawn);
 			blackPawnSet.add(pawn);
 		}
+		
 		for (int file = 0; file < FILES; file++) {
 			if (file == 0 || file == 7) {
 				fields[RANKS - 1][file].setPiece(new Rook(Color.BLACK,
@@ -116,14 +121,26 @@ public class Board {
 		}
 		
 		System.out.println("Board setup complete");
+		System.out.println(printBoard());
 	}
 	
 	
 	// print current state of the chess board
-	public void printBoard() {
-		System.out.println("test");
-		System.out.println("");
-
+	public String printBoard() {
+		
+		String s = "";
+		for (int i = 0; i < RANKS; i++) {
+			String row = "";
+			for (int j = 0; j < FILES; j++) {
+				row = row + " " + fields[i][j].getPiece().toString() + fields[i][j].getPiece() + " ";
+				if (j < FILES - 1) {
+					row = row + "|";
+				}
+			}
+			s += row + "\n" + LINE + "\n" + "\n";
+		}
+		s = NUMBERINGFILES + s;
+		return s;
 	}
 
 	public boolean isValidRank(int rank) {
