@@ -10,8 +10,8 @@ public class Pawn extends ChessPiece {
 		return false;
 	}
 
-	public Pawn(Color color, int i, int j) {
-		super(color, i, j);
+	public Pawn(Color color, int rank, int file) {
+		super(color, rank, file);
 	}
 
 

@@ -4,8 +4,8 @@ import chess.*;
 
 public class Bishop extends ChessPiece {
 	
-	public Bishop(Color color, int i, int j){
-		super(color,i,j);
+	public Bishop(Color color, int rank, int file){
+		super(color,rank,file);
 	}
 
 	@Override

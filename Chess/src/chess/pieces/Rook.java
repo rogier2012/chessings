@@ -4,8 +4,8 @@ import chess.*;
 
 public class Rook extends ChessPiece {
 	
-	public Rook(Color color, int i, int j) {
-		super(color, i, j);
+	public Rook(Color color, int rank, int file) {
+		super(color, rank, file);
 		// TODO Auto-generated constructor stub
 	}
 

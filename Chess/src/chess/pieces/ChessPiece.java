@@ -6,9 +6,9 @@ public abstract class ChessPiece {
 	private Color color;
 	private int[] position;
 
-	public ChessPiece(Color color, int i, int j){
+	public ChessPiece(Color color, int rank, int file){
 		this.color = color;
-		this.position = new int[]{i,j};
+		this.position = new int[]{rank,file};
 	}
 	
 	public Field getPosition() {
@@ -19,20 +19,9 @@ public abstract class ChessPiece {
 		return this.color;
 	}
 
-	public void setPosition(int i, int j, Board board) {
-		this.position[0] = i;
-		this.position[1] = j;
-//		board.setField(this, i, j);
-	}
-
-	public void move(int i, int j, Board board) {
-		if ((board.getField(i, j).getPiece().equals(null) || board
-				.getField(i, j).getPiece().getColor() == this.color.other())
-				&& this.isValidMove()) {
-			this.setPosition(i, j, board);
-		} else {
-
-		}
+	public void setPosition(int rank, int file, Board board) {
+		this.position[0] = rank;
+		this.position[1] = file;
 	}
 
 	public abstract boolean isValidMove();
