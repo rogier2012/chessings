@@ -154,9 +154,17 @@ public class Board {
 	public boolean isWithinBoard(int rank, int file) {
 		return isValidRank(rank) && isValidFile(file);
 	}
+	
+	public boolean isWithinBoard(Position position) {
+		return isValidRank(position.getRank()) && isValidFile(position.getFile());
+	}
 
 	public Field getField(int rank, int file) {
 		return this.fields[rank][file];
+	}
+	
+	public Field getField(Position position)	{
+		return this.fields[position.getRank()][position.getFile()];
 	}
 
 	public Field[][] getFields() {

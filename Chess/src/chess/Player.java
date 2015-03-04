@@ -22,13 +22,18 @@ public abstract class Player {
 	 * Queries
 	 */
 	
-    public abstract int determineMove(Board board);
+    public abstract Position determineMove(Board board);
 	
 	/*
 	 * Commands
 	 */
     
-    public abstract void makeMove(Board board);
+    public void makeMove(Board board)	{
+    	
+    	
+    	
+    	
+    }
 	
 	/*
 	 * Getters and Setters

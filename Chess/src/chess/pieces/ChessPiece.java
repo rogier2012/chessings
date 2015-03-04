@@ -4,12 +4,13 @@ import chess.*;
 
 public abstract class ChessPiece {
 	private Color color;
-	private int[] position;
+	private Position position;
 	
 
 	public ChessPiece(Color color, int rank, int file){
 		this.color = color;
-		this.position = new int[]{rank,file};
+		this.position.setRank(rank);
+		this.position.setFile(file);
 	}
 	
 	
@@ -35,8 +36,8 @@ public abstract class ChessPiece {
 	}
 
 	public void setPosition(int rank, int file, Board board) {
-		this.position[0] = rank;
-		this.position[1] = file;
+		this.position.setRank(rank);
+		this.position.setFile(file);
 	}
 
 	public abstract boolean isValidMove();
