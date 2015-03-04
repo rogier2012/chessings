@@ -7,7 +7,7 @@ public abstract class ChessPiece {
 	private int[] position;
 	private boolean firstMoveMade;
 
-	public ChessPiece(Color color, int rank, int file, boolean firstMoveMade){
+	public ChessPiece(Color color, int rank, int file){
 		this.color = color;
 		this.position = new int[]{rank,file};
 		this.firstMoveMade = firstMoveMade;

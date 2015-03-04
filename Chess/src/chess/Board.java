@@ -28,23 +28,23 @@ public class Board {
 	
 		// Reset white
 		for (int file = 0; file < FILES; file++)	{
-			fields[1][file].setPiece(new Pawn(Color.WHITE, 1, file, false));
+			fields[1][file].setPiece(new Pawn(Color.WHITE, 1, file));
 		}
 		for (int file = 0; file < FILES; file++)	{
 			if (file == 0 || file == 7)	{
-				fields[0][file].setPiece(new Rook(Color.WHITE, 0, file, false));
+				fields[0][file].setPiece(new Rook(Color.WHITE, 0, file));
 			}
 			if (file == 1 || file == 6)	{
-				fields[0][file].setPiece(new Knight(Color.WHITE, 0, file, false));
+				fields[0][file].setPiece(new Knight(Color.WHITE, 0, file));
 			}
 			if (file == 2 || file == 5)	{
-				fields[0][file].setPiece(new Bishop(Color.WHITE, 0, file, false));
+				fields[0][file].setPiece(new Bishop(Color.WHITE, 0, file));
 			}
 			if (file == 3)	{
-				fields[0][file].setPiece(new Queen(Color.WHITE, 0, file, false));
+				fields[0][file].setPiece(new Queen(Color.WHITE, 0, file));
 			}
 			if (file == 4)	{
-				fields[0][file].setPiece(new King(Color.WHITE, 0, file, false));
+				fields[0][file].setPiece(new King(Color.WHITE, 0, file));
 			}
 		}
 		
@@ -57,23 +57,23 @@ public class Board {
 		
 		// Reset black
 		for (int file = 0; file < FILES; file++)	{
-			fields[RANKS - 2][file].setPiece(new Pawn(Color.BLACK, RANKS - 2, file, false));
+			fields[RANKS - 2][file].setPiece(new Pawn(Color.BLACK, RANKS - 2, file));
 		}
 		for (int file = 0; file < FILES; file++)	{ 
 			if (file == 0 || file == 7)	{
-				fields[RANKS - 1][file].setPiece(new Rook(Color.BLACK, RANKS - 1, file, false));
+				fields[RANKS - 1][file].setPiece(new Rook(Color.BLACK, RANKS - 1, file));
 			}
 			if (file == 1 || file == 6)	{
-				fields[RANKS - 1][file].setPiece(new Knight(Color.BLACK, RANKS - 1, file, false));
+				fields[RANKS - 1][file].setPiece(new Knight(Color.BLACK, RANKS - 1, file));
 			}
 			if (file == 2 || file == 5)	{
-				fields[RANKS - 1][file].setPiece(new Bishop(Color.BLACK, RANKS - 1, file, false));
+				fields[RANKS - 1][file].setPiece(new Bishop(Color.BLACK, RANKS - 1, file));
 			}
 			if (file == 3)	{
-				fields[RANKS - 1][file].setPiece(new Queen(Color.BLACK, RANKS - 1, file, false));
+				fields[RANKS - 1][file].setPiece(new Queen(Color.BLACK, RANKS - 1, file));
 			}
 			if (file == 4)	{
-				fields[RANKS - 1][file].setPiece(new King(Color.BLACK, RANKS - 1, file, false));
+				fields[RANKS - 1][file].setPiece(new King(Color.BLACK, RANKS - 1, file));
 			}
 		}
 	}
