@@ -2,10 +2,18 @@ package chess;
 
 public class ComputerPlayer extends Player {
 	
+	/*
+	 * Instance variables
+	 */
+	
 	private String name;
 	
 	private Strategy strategy;
 	private Color color;
+	
+	/*
+	 * Constructors
+	 */
 	
 	public ComputerPlayer(String aName, Color aColor, Strategy aStrategy) {
 		super(aName, aColor);
@@ -14,12 +22,19 @@ public class ComputerPlayer extends Player {
 		this.strategy = aStrategy;
 	}
 	
+	/*
+	 * Queries
+	 */
 	
 	@Override
 	public int determineMove(Board board) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
+	/*
+	 * Commands 
+	 */
 
 	@Override
 	public void makeMove(Board board) {
