@@ -26,7 +26,7 @@ public class Board {
 	
 	public void reset(){
 	
-		// Reset white
+		// Reset whhite
 		for (int file = 0; file < FILES; file++)	{
 			fields[1][file].setPiece(new Pawn(Color.WHITE, 1, file));
 		}
