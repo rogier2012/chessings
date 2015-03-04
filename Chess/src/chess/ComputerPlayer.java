@@ -35,13 +35,6 @@ public class ComputerPlayer extends Player {
 	/*
 	 * Commands 
 	 */
-
-	@Override
-	public void makeMove(Board board) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	
 	/*
 	 * Getters and Setters
