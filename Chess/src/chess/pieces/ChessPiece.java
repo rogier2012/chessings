@@ -5,10 +5,16 @@ import chess.*;
 public abstract class ChessPiece {
 	private Color color;
 	private int[] position;
+	private boolean firstMoveMade;
 
-	public ChessPiece(Color color, int rank, int file){
+	public ChessPiece(Color color, int rank, int file, boolean firstMoveMade){
 		this.color = color;
 		this.position = new int[]{rank,file};
+		this.firstMoveMade = firstMoveMade;
+	}
+	
+	public boolean getFirstMoveMade() {
+		return firstMoveMade;
 	}
 	
 	public Field getPosition() {

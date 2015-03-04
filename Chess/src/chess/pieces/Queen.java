@@ -4,8 +4,8 @@ import chess.*;
 
 public class Queen extends ChessPiece {
 	
-	public Queen(Color color, int rank, int file) {
-		super(color, rank, file);
+	public Queen(Color color, int rank, int file, boolean firstMoveMade) {
+		super(color, rank, file, firstMoveMade);
 		// TODO Auto-generated constructor stub
 	}
 
