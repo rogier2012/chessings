@@ -19,5 +19,8 @@ public class Rook extends ChessPiece {
 		firstMoveMade = true;
 	}
 
-
+	public String toString() {
+		return "Rook   ";
+	}
+	
 }

@@ -16,9 +16,9 @@ public abstract class ChessPiece {
 	public String toString() {
 		String toReturn;
 		if (color.equals(Color.WHITE)) {
-			toReturn = "W";
+			toReturn = "| W";
 		} else if (color.equals(Color.BLACK)) {
-			toReturn = "B";
+			toReturn = "| B";
 		} else {
 			toReturn = "Unknown!";
 		}

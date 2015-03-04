@@ -10,9 +10,9 @@ public enum Color {
 	public String toString() {
 		String toReturn;
 		if (this.equals(WHITE)) {
-			toReturn = "W";
+			toReturn = "| W";
 		} else if (this.equals(BLACK)) {
-			toReturn = "B";
+			toReturn = "| B";
 		} else {
 			toReturn = "Unknown!";
 		}
