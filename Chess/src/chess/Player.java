@@ -28,7 +28,11 @@ public abstract class Player {
 	 * Commands
 	 */
     
-    public abstract void makeMove(Board board);
+    public void makeMove(Board board)	{
+    	
+    	// NOT YET IMPLEMENTED
+    	
+    }
 	
 	/*
 	 * Getters and Setters
