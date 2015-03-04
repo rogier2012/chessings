@@ -12,7 +12,6 @@ public class King extends ChessPiece {
 
 	@Override
 	public boolean isValidMove() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

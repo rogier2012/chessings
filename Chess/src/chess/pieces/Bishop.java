@@ -10,7 +10,6 @@ public class Bishop extends ChessPiece {
 
 	@Override
 	public boolean isValidMove() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

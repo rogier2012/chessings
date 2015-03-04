@@ -1,13 +1,28 @@
 package chess;
 
 import chess.pieces.*;
+import java.util.Set;
+import java.util.HashSet;
+
 
 public class Board {
 
+	/*
+	 * Constants
+	 */
+	
 	public static final int FILES = 8;
 	public static final int RANKS = 8;
-
 	private Field[][] fields;
+
+	
+	/*
+	 * Instance variables
+	 */
+	
+
+	private Set<Pawn> whitePawnSet = new HashSet<Pawn>();
+	private Set<Pawn> blackPawnSet = new HashSet<Pawn>();
 
 	public Board() {
 		fields = new Field[RANKS][FILES];
@@ -21,15 +36,31 @@ public class Board {
 			}
 		}
 
+		
+		// Create Pieces
+
 		this.reset();
 	}
 
-	public void reset() {
+	
+	public void reset(){
+		
+		/**
+		 * Clear sets
+		 */
+		
+		// Clear pawnSets
+		whitePawnSet.clear();
+		blackPawnSet.clear();
 
 		// Reset white
-		for (int file = 0; file < FILES; file++) {
-			fields[1][file].setPiece(new Pawn(Color.WHITE, 1, file));
+
+		for (int file = 0; file < FILES; file++)	{
+			Pawn pawn = new Pawn(Color.WHITE, 1, file);
+			fields[1][file].setPiece(pawn);
+			whitePawnSet.add(pawn);
 		}
+		
 		for (int file = 0; file < FILES; file++) {
 			if (file == 0 || file == 7) {
 				fields[0][file].setPiece(new Rook(Color.WHITE, 0, file));
@@ -56,9 +87,10 @@ public class Board {
 		}
 
 		// Reset black
-		for (int file = 0; file < FILES; file++) {
-			fields[RANKS - 2][file].setPiece(new Pawn(Color.BLACK, RANKS - 2,
-					file));
+		for (int file = 0; file < FILES; file++)	{
+			Pawn pawn = new Pawn(Color.BLACK, RANKS - 2, file);
+			fields[RANKS - 2][file].setPiece(pawn);
+			blackPawnSet.add(pawn);
 		}
 		for (int file = 0; file < FILES; file++) {
 			if (file == 0 || file == 7) {
@@ -87,8 +119,8 @@ public class Board {
 	// print current state of the chess board
 	public void printBoard() {
 		System.out.println("test");
-		
-		
+		System.out.println("");
+
 	}
 
 	public boolean isValidRank(int rank) {

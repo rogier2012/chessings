@@ -12,7 +12,6 @@ public class Rook extends ChessPiece {
 	}
 
 	public boolean isValidMove() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 	
