@@ -81,7 +81,7 @@ public class Board {
 
 		// Clear middle
 		for (int rank = 2; rank < RANKS - 2; rank++) {
-			for (int file = 0; rank < FILES; file++) {
+			for (int file = 0; file < FILES; file++) {
 				fields[rank][file].setPiece(null);
 			}
 		}
@@ -114,6 +114,8 @@ public class Board {
 						RANKS - 1, file));
 			}
 		}
+		
+		System.out.println("Board setup complete");
 	}
 	
 	
