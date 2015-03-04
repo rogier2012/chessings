@@ -10,17 +10,16 @@ public class Board {
 	/*
 	 * Constants
 	 */
-	
-	private static final int FILES = 8;
-	private static final int RANKS = 8;
-	public Field[][] fields;
+
+	public static final int FILES = 8;
+	public static final int RANKS = 8;
 
 	
 	/*
 	 * Instance variables
 	 */
 	
-
+	private Field[][] fields;
 	private Set<Pawn> whitePawnSet = new HashSet<Pawn>();
 	private Set<Pawn> blackPawnSet = new HashSet<Pawn>();
 
@@ -39,12 +38,10 @@ public class Board {
 			}
 		}
 
-		
 		// Create Pieces
 
 		this.reset();
 	}
-
 	
 	public void reset(){
 		
