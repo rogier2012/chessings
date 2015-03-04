@@ -22,7 +22,7 @@ public abstract class Player {
 	 * Queries
 	 */
 	
-    public abstract int determineMove(Board board);
+    public abstract Position determineMove(Board board);
 	
 	/*
 	 * Commands
