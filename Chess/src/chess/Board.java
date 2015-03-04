@@ -154,6 +154,12 @@ public class Board {
 						row = row + " " + fields[i][j].getColor() + "-"
 								+ fields[i][j].getPiece() + " ";
 					}
+					row = row + " " + fields[i][j].getPiece().toString()
+							+ fields[i][j].getPiece() + " ";
+				}
+
+				if (j < FILES - 1) {
+					row = row + "|";
 				}
 			}
 			s += row + "\n" + LINE + "\n" + "\n";
