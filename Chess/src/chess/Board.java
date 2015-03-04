@@ -48,6 +48,13 @@ public class Board {
 			}
 		}
 		
+		// Clear middle
+		for (int rank = 2; rank < RANKS - 2; rank++)	{
+			for (int file = 0; rank < FILES; file++)	{
+				fields[rank][file].setPiece(null);
+			}
+		}
+		
 		// Reset black
 		for (int file = 0; file < FILES; file++)	{
 			fields[RANKS - 2][file].setPiece(new Pawn(Color.BLACK, RANKS - 2, file));
