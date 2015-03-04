@@ -13,18 +13,19 @@ public class Board {
 	
 	public static final int FILES = 8;
 	public static final int RANKS = 8;
+
+	private Field[][] fields;
 	
 	/*
 	 * Instance variables
 	 */
 	
-	private Field[][] fields = new Field[RANKS][FILES];
 
 	private Set<Pawn> whitePawnSet = new HashSet<Pawn>();
 	private Set<Pawn> blackPawnSet = new HashSet<Pawn>();
 
 	public Board() {
-
+		fields = new Field[RANKS][FILES];
 		// Create new fields
 		Color color = Color.WHITE;
 		for (int rank = 0; rank < RANKS; rank++) {
@@ -113,7 +114,9 @@ public class Board {
 		}
 	}
 	
+	// print current state of the chess board
 	public void printBoard() {
+		System.out.println("test");
 		System.out.println("");
 
 	}
