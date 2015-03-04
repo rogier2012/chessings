@@ -30,7 +30,8 @@ public abstract class Player {
     
     public void makeMove(Board board)	{
     	
-    	// NOT YET IMPLEMENTED
+    	
+    	
     	
     }
 	
