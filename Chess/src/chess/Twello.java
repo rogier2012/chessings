@@ -10,4 +10,6 @@ public class Twello {
 		return antwoord;
 	}
 	
+	// Tip van bob voor GUI: libgdx
+	
 }
