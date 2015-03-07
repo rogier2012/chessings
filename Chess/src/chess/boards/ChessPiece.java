@@ -23,7 +23,7 @@ public abstract class ChessPiece {
 		return this.color;
 	}
 
-	public void setPosition(int rank, int file, Board board) {
+	public void setPosition(int rank, int file) {
 		this.position.setRank(rank);
 		this.position.setFile(file);
 	}

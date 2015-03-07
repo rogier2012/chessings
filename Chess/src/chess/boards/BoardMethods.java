@@ -1,6 +1,6 @@
 package chess.boards;
 
-import chess.Position;
+import chess.*;
 
 public class BoardMethods {
 	
@@ -50,15 +50,33 @@ public class BoardMethods {
 	private static final String NUMBERINGRANKS = "  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  "
 			+ "" + "\n" + "\n";
 	
-	public void resetWhitePawnList(Board board)	{
+	public void reset(Board board)	{
+		board.clearPawnLists();
 		
+		resetWhitePawnList(board);
+		resetBlackPawnList(board);
+		
+		resetFields(board);
+	}
+	
+	
+	public void resetWhitePawnList(Board board)	{
+		ChessPiece pawn;
+		for (int file = 0; file < Board.FILES; file++)	{
+			pawn = new Pawn(Color.WHITE, WHITEPAWNRANK, file);
+			board.setPawnInList(file, pawn);
+		}
 	}
 	
 	public void resetBlackPawnList(Board board)	{
-		
+		ChessPiece pawn;
+		for (int file = 0; file < Board.FILES; file++)	{
+			pawn = new Pawn(Color.BLACK, BLACKPAWNRANK, file);
+			board.setPawnInList(file, pawn);
+		}
 	}
 	
-	public static void resetFields(Board board)	{
+	public void resetFields(Board board)	{
 		int file;
 		// Reset white fields
 		

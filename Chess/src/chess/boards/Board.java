@@ -17,10 +17,10 @@ public class Board {
 	private byte[][] fields;
 	
 	public Board()	{
-		fields = new byte[RANKS][FILES];
+		this.fields = new byte[RANKS][FILES];
 		
-		whitePawnList = new ArrayList<ChessPiece>();
-		blackPawnList = new ArrayList<ChessPiece>();
+		this.whitePawnList = new ArrayList<ChessPiece>();
+		this.blackPawnList = new ArrayList<ChessPiece>();
 	}
 
 	public byte getPiece(int rank, int file)	{
@@ -39,11 +39,16 @@ public class Board {
 		boolean isWhite = (pawn.getColor() == Color.WHITE);
 		boolean isBlack = (pawn.getColor() == Color.BLACK);
 		if (isWhite)	{
-			whitePawnList.set(index, pawn);
+			this.whitePawnList.set(index, pawn);
 		}
 		if (isBlack)	{
-			blackPawnList.set(index, pawn);
+			this.blackPawnList.set(index, pawn);
 		}
+	}
+	
+	public void clearPawnLists()	{
+		this.whitePawnList.clear();
+		this.blackPawnList.clear();
 	}
 
 	public List<ChessPiece> getBlackPawnList()	{
