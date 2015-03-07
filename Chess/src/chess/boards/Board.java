@@ -45,11 +45,6 @@ public class Board {
 			this.blackPawnList.set(index, pawn);
 		}
 	}
-	
-	public void clearPawnLists()	{
-		this.whitePawnList.clear();
-		this.blackPawnList.clear();
-	}
 
 	public List<ChessPiece> getBlackPawnList()	{
 		return this.blackPawnList;

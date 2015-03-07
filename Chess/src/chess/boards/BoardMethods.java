@@ -51,7 +51,8 @@ public class BoardMethods {
 			+ "" + "\n" + "\n";
 	
 	public void reset(Board board)	{
-		board.clearPawnLists();
+		board.getWhitePawnList().clear();
+		board.getBlackPawnList().clear();
 		
 		resetWhitePawnList(board);
 		resetBlackPawnList(board);
