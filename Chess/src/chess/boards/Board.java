@@ -34,6 +34,17 @@ public class Board {
 	public List<ChessPiece> getWhitePawnList()	{
 		return this.whitePawnList;
 	}
+	
+	public void setPawnInList(int index, ChessPiece pawn)	{
+		boolean isWhite = (pawn.getColor() == Color.WHITE);
+		boolean isBlack = (pawn.getColor() == Color.BLACK);
+		if (isWhite)	{
+			whitePawnList.set(index, pawn);
+		}
+		if (isBlack)	{
+			blackPawnList.set(index, pawn);
+		}
+	}
 
 	public List<ChessPiece> getBlackPawnList()	{
 		return this.blackPawnList;

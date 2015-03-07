@@ -50,15 +50,15 @@ public class BoardMethods {
 	private static final String NUMBERINGRANKS = "  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  "
 			+ "" + "\n" + "\n";
 	
-	public void resetWhitePawnSet(Board board)	{
+	public void resetWhitePawnList(Board board)	{
 		
 	}
 	
-	public void resetBlackPawnSet(Board board)	{
+	public void resetBlackPawnList(Board board)	{
 		
 	}
 	
-	public void resetFields(Board board)	{
+	public static void resetFields(Board board)	{
 		int file;
 		// Reset white fields
 		
@@ -119,7 +119,7 @@ public class BoardMethods {
 	}
 	
 	
-	public String test(chess.boards.Board board)	{
+	public static String test(chess.boards.Board board)	{
 		int rowCounter = 8;
 		boolean insertRowCounter;
 
@@ -139,10 +139,10 @@ public class BoardMethods {
 				} else {
 					if (insertRowCounter) {
 						row = rowCounter-- + "  " + row
-								+ "-" + byteToString(board.getPiece(rank ,file));
+								+ "|" + byteToString(board.getPiece(rank ,file));
 						insertRowCounter = false;
 					} else {
-						row = row + "-"
+						row = row + "|"
 								+ byteToString(board.getPiece(rank ,file));
 					}
 				}
@@ -153,7 +153,7 @@ public class BoardMethods {
 		return s;
 	}
 	
-	public String byteToString(byte piece)	{
+	public static String byteToString(byte piece)	{
 		String res = "";
 		if (piece == EMPTY)	{
 			res = "		";
@@ -187,19 +187,19 @@ public class BoardMethods {
 		return res;
 	}
 	
-	public boolean isValidRank(int rank) {
+	public static boolean isValidRank(int rank) {
 		return rank >= 0 && rank < Board.RANKS;
 	}
 
-	public boolean isValidFile(int file) {
+	public static boolean isValidFile(int file) {
 		return file >= 0 && file < Board.FILES;
 	}
 
-	public boolean isWithinBoard(int rank, int file) {
+	public static boolean isWithinBoard(int rank, int file) {
 		return isValidRank(rank) && isValidFile(file);
 	}
 
-	public boolean isWithinBoard(Position position) {
+	public static boolean isWithinBoard(Position position) {
 		return isValidRank(position.getRank())
 				&& isValidFile(position.getFile());
 	}

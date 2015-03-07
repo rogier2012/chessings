@@ -13,9 +13,6 @@ public class ChessPieceMethods {
 		} else {
 			result = "Unknown!";
 		}
-
 		return result;
 	}
-	
-	
 }
