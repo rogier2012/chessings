@@ -51,17 +51,14 @@ public class BoardMethods {
 			+ "" + "\n" + "\n";
 	
 	public void reset(Board board)	{
-		board.getWhitePawnList().clear();
-		board.getBlackPawnList().clear();
-		
 		resetWhitePawnList(board);
 		resetBlackPawnList(board);
-		
 		resetFields(board);
 	}
 	
 	
 	public void resetWhitePawnList(Board board)	{
+		board.getWhitePawnList().clear();
 		ChessPiece pawn;
 		for (int file = 0; file < Board.FILES; file++)	{
 			pawn = new Pawn(Color.WHITE, WHITEPAWNRANK, file);
@@ -70,6 +67,7 @@ public class BoardMethods {
 	}
 	
 	public void resetBlackPawnList(Board board)	{
+		board.getBlackPawnList().clear();
 		ChessPiece pawn;
 		for (int file = 0; file < Board.FILES; file++)	{
 			pawn = new Pawn(Color.BLACK, BLACKPAWNRANK, file);
@@ -136,7 +134,6 @@ public class BoardMethods {
 			}
 		}
 	}
-	
 	
 	public static String test(chess.boards.Board board)	{
 		int rowCounter = 8;
