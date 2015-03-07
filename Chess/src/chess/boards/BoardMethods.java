@@ -139,11 +139,11 @@ public class BoardMethods {
 				} else {
 					if (insertRowCounter) {
 						row = rowCounter-- + "  " + row
-								+ "-" + board.getPiece(rank ,file);
+								+ "-" + byteToString(board.getPiece(rank ,file));
 						insertRowCounter = false;
 					} else {
 						row = row + "-"
-								+ board.getPiece(rank ,file);
+								+ byteToString(board.getPiece(rank ,file));
 					}
 				}
 			}
@@ -151,6 +151,40 @@ public class BoardMethods {
 		}
 		s = NUMBERINGFILES + s;
 		return s;
+	}
+	
+	public String byteToString(byte piece)	{
+		String res = "";
+		if (piece == EMPTY)	{
+			res = "		";
+		} else if(piece == WHITEPAWN)	{
+			res = "  W PAWN  ";
+		} else if(piece == BLACKPAWN)	{
+			res = "  B PAWN  ";
+		} else if(piece == WHITEKING)	{	
+			res = "  W KING  ";
+		} else if(piece == BLACKKING)	{	
+			res = "  B KING  ";
+		} else if(piece == WHITEQUEEN)	{	
+			res = "  W QUEEN ";
+		} else if(piece == BLACKQUEEN)	{	
+			res = "  B QUEEN ";
+		} else if(piece == WHITEBISHOP)	{	
+			res = " W BISHOP ";
+		} else if(piece == BLACKBISHOP)	{
+			res = " B BISHOP ";
+		} else if(piece == WHITEKNIGHT)	{
+			res = " W KNIGHT ";
+		} else if(piece == BLACKKNIGHT)	{	
+			res = " B KNIGHT ";
+		} else if(piece == WHITEROOK)	{	
+			res = "  W ROOK  ";
+		} else if(piece == BLACKROOK)	{	
+			res = "  B ROOK  ";
+		} else {
+			System.out.println("I'm trying to print an invalid piece byte representation!");
+		}
+		return res;
 	}
 	
 	public boolean isValidRank(int rank) {
