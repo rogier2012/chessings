@@ -4,7 +4,14 @@ import java.io.*;
 
 public class InputForMove {
 	public InputForMove(){
-		this.input();
+		
+	}
+	
+	public static void main(String[] args) {
+		InputForMove input = new InputForMove();
+		Position[] positionschange = input.input();
+		System.out.println(positionschange[0]);
+		System.out.println(positionschange[1]);
 	}
 	
 	public Position[] input(){
