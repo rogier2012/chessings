@@ -4,10 +4,17 @@ import chess.*;
 
 public class Pawn extends ChessPiece {
 	private boolean firstMoveMade;
+	private boolean isWhite;
 
 	@Override
 	public boolean isValidMove(Move move) {
-		// TODO Auto-generated method stub
+		Position initialPoint = move.getInitial();
+		Position endPoint = move.getEnd();
+		if ((initialPoint.getRank() == endPoint.getRank() - 1) && initialPoint.getFile() == endPoint.getFile()) {
+			return true;
+		} else if (initialPoint.getRank() == endPoint.getRank() - 1) {
+			
+		}
 		return false;
 	}
 

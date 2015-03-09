@@ -9,4 +9,10 @@ public class Move {
 		this.initialPoint = initialPoint;
 		this.endPoint = endPoint;
 	}
+	public Position getInitial() {
+		return initialPoint;
+	}
+	public Position getEnd() {
+		return endPoint;
+	}
 }
