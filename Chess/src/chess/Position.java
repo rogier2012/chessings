@@ -23,4 +23,8 @@ public class Position {
 		this.file = file;
 	}
 	
+	
+	public String toString(){
+		return ("(" + rank + ", " + file + ")");
+	}
 }

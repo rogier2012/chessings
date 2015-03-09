@@ -26,9 +26,12 @@ class Ron {
 	public String waaromTwello() {
 		return antwoord;
 	}
+	
 
-	public void moveRon(int rageLvl) {
-		if (rageLvl > 10) {
+	// Tip van bob voor GUI: libgdx
+
+	public void moveRon(int rageLvl){
+		if (rageLvl > 10 ){
 			isRonDood = true;
 		} else {
 			rageLvl++;
