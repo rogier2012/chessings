@@ -11,7 +11,7 @@ public class Rook extends ChessPiece {
 		firstMoveMade = false;
 	}
 
-	public boolean isValidMove() {
+	public boolean isValidMove(Move move) {
 		return true;
 	}
 	
@@ -20,7 +20,7 @@ public class Rook extends ChessPiece {
 	}
 
 	public String toString() {
-		return "Rook   ";
+		return "Rook ";
 	}
 	
 }
