@@ -1,6 +1,8 @@
 package chess.pieces;
 
 import chess.*;
+import chess.boards.*;
+import chess.pieces.*;
 
 public class Bishop extends ChessPiece {
 	
@@ -9,7 +11,7 @@ public class Bishop extends ChessPiece {
 	}
 
 	@Override
-	public boolean isValidMove() {
+	public boolean isValidMove(Move move) {
 		return false;
 	}
 	

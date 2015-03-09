@@ -28,5 +28,5 @@ public abstract class ChessPiece {
 		this.position.setFile(file);
 	}
 
-	public abstract boolean isValidMove();
+	public abstract boolean isValidMove(int rank, int file, Board board);
 }

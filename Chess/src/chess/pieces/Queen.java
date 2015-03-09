@@ -9,12 +9,12 @@ public class Queen extends ChessPiece {
 	}
 
 	@Override
-	public boolean isValidMove() {
+	public boolean isValidMove(Move move) {
 		return false;
 	}
 
 	public String toString() {
-		return "Queen  ";
+		return "Queen ";
 	}
 	
 

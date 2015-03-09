@@ -29,9 +29,7 @@ public abstract class Player {
 	 */
     
     public void makeMove(Board board)	{
-    	
     	Move keuze = determineMove(board);
-    	
     	
     }
 	
