@@ -7,7 +7,9 @@ public class BoardMethods {
 	/*
 	 * Piece byte values
 	 * 
-	 * 00000000 -  0 - EMPTY - EMPTY
+	 * Binary   -  N - Color - Piece
+	 * 
+	 * 00000000 -  0 - N/A   - EMPTY
 	 * 00000001 -  1 - WHITE - PAWN
 	 * 00000010 -  2 - BLACK - PAWN
 	 * 00000011 -  3 - WHITE - KING
@@ -55,7 +57,6 @@ public class BoardMethods {
 		resetBlackPawnList(board);
 		resetFields(board);
 	}
-	
 	
 	public void resetWhitePawnList(Board board)	{
 		board.getWhitePawnList().clear();
