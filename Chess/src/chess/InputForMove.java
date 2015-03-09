@@ -3,9 +3,6 @@ package chess;
 import java.io.*;
 
 public class InputForMove {
-	public InputForMove(){
-		
-	}
 	
 	public static void main(String[] args) {
 		InputForMove input = new InputForMove();
