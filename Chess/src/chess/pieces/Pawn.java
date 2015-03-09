@@ -6,7 +6,7 @@ public class Pawn extends ChessPiece {
 	private boolean firstMoveMade;
 
 	@Override
-	public boolean isValidMove() {
+	public boolean isValidMove(Move move) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -17,7 +17,7 @@ public class Pawn extends ChessPiece {
 	}
 
 	public String toString() {
-		return "Pawn   ";
+		return "Pawn ";
 	}
 
 }
