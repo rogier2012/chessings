@@ -146,7 +146,8 @@ public class BoardMethods {
 			String row = "";
 			insertRowCounter = true;
 			for (int file = 0; file < Board.FILES; file++) {
-				if (board.getPiece(rank ,file) == 0) {
+				Position p = new Position(rank, file);
+				if (board.getPiece(p) == 0) {
 					if (insertRowCounter) {
 						row = rowCounter-- + row + "  |          ";
 						insertRowCounter = false;
@@ -156,11 +157,11 @@ public class BoardMethods {
 				} else {
 					if (insertRowCounter) {
 						row = rowCounter-- + "  " + row
-								+ "|" + byteToString(board.getPiece(rank ,file));
+								+ "|" + byteToString(board.getPiece(p));
 						insertRowCounter = false;
 					} else {
 						row = row + "|"
-								+ byteToString(board.getPiece(rank ,file));
+								+ byteToString(board.getPiece(p));
 					}
 				}
 			}
