@@ -18,9 +18,7 @@ public class PieceMethods {
 			if (board.getPiece(endPoint) == 0) {
 				result = true;
 			}
-
 			result = true;
-
 		}
 		return result;
 	}
