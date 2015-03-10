@@ -5,17 +5,29 @@ import chess.Position;
 
 public class Pawn extends ChessPiece{
 	
-	private boolean isFirstMove;
-	private boolean isSecondMove;
+	private boolean firstMoveDone;
+	private boolean secondMoveDone;
 	
 	public Pawn(Color color, int rank, int file)	{
 		super(color, rank, file);
-		isFirstMove = true;
-		isSecondMove = false;
+		firstMoveDone = true;
+		secondMoveDone = false;
 	}
 	
-	public boolean isFirstMove()	{
-		return this.isFirstMove;
+	public boolean isFirstMoveDone()	{
+		return this.firstMoveDone;
+	}
+
+	public boolean isSecondMoveDone() {
+		return secondMoveDone;
+	}
+
+	public void setSecondMoveDone(boolean b) {
+		this.secondMoveDone = b;
+	}
+
+	public void setFirstMoveDone(boolean b) {
+		this.firstMoveDone = b;
 	}
 	
 }
