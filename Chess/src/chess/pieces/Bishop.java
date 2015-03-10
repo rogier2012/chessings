@@ -10,7 +10,6 @@ public class Bishop extends ChessPiece {
 		super(color,rank,file);
 	}
 
-	@Override
 	public boolean isValidMove(Move move) {
 		return false;
 	}

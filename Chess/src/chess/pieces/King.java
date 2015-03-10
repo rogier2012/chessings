@@ -10,7 +10,6 @@ public class King extends ChessPiece {
 		firstMoveMade = false;
 	}
 
-	@Override
 	public boolean isValidMove(Move move) {
 		return false;
 	}

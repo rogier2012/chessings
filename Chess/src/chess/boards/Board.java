@@ -26,6 +26,12 @@ public class Board {
 	public byte getPiece(int rank, int file)	{
 		return this.fields[rank][file];
 	}
+	
+	public byte getPiece(Position pos) {
+		int file = pos.getFile();
+		int rank = pos.getRank();
+		return getPiece(rank, file);
+	}
 
 	public void setPiece(int rank, int file, byte piece)	{
 		this.fields[rank][file] = piece;

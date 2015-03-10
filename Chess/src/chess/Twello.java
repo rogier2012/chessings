@@ -4,7 +4,7 @@ public class Twello {
 
 	public static void main(String[] args) {
 		Ron ron = new Ron();
-		
+		ron.makeSchaak();
 		ron.watIsRon();
 	}
 
@@ -18,13 +18,18 @@ class Ron {
 
 	private String antwoord = "aardbei";
 	private boolean isRonDood;
-
+	private String schaakspel = "schaakspel";
+	private int counter = 0;
 	public Ron() {
 
 	}
 
 	public String waaromTwello() {
 		return antwoord;
+	}
+	
+	public String makeSchaak() {
+		return schaakspel;
 	}
 	
 
@@ -52,6 +57,7 @@ class Ron {
 		weetjeWatJijBent();
 	}
 	public void weetjeWatJijBent() {
+		counter++;
 		try {
 			Thread.sleep(2234);
 		} catch (InterruptedException e) {
@@ -62,7 +68,9 @@ class Ron {
 		System.out.println("Beunhaaas beunhaas jij bent een beunhaasss.......");
 		// Copyright RvB
 		
-		weetjeWatJijBent();
+		if (counter < 3) {
+			weetjeWatJijBent();
+		}
 
 	}
 }
