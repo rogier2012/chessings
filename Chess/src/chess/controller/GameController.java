@@ -8,7 +8,7 @@ public class GameController {
 		boolean doorgaan = true;
 		game.getBoardController().reset(game.getBoard());
 		while (doorgaan){
-			game.getPlayers()[game.getCurrent()].makeMove(game.getBoard());
+			game.getPlayerController().makeMove(game.getPlayers()[game.getCurrent()], game.getBoard());
 		}
 	}
 	

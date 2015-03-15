@@ -12,7 +12,6 @@ public class ComputerPlayer extends Player {
 	 */
 	
 	private String name;
-	
 	private Strategy strategy;
 	private Color color;
 	
@@ -26,21 +25,7 @@ public class ComputerPlayer extends Player {
 		this.color = aColor;
 		this.strategy = aStrategy;
 	}
-	
-	/*
-	 * Queries
-	 */
-	
-	@Override
-	public Move determineMove(Board board) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	/*
-	 * Commands 
-	 */
-	
+
 	/*
 	 * Getters and Setters
 	 */
@@ -68,7 +53,6 @@ public class ComputerPlayer extends Player {
 	public Color getColor() {
 		return color;
 	}
-
 
 	public void setColor(Color color) {
 		this.color = color;

@@ -11,12 +11,5 @@ public class HumanPlayer extends Player{
 	}
 
 	
-	//TODO make controller
-	@Override
-	public Move determineMove(Board board) {
-		InputForMove input = new InputForMove();
-		Position[] positions = input.input();
-		
-		return new Move(positions[0], positions[1]);
-	}
+
 }

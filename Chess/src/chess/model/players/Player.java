@@ -23,22 +23,6 @@ public abstract class Player {
 	}
 	
 	/*
-	 * Queries
-	 */
-	
-	//TODO
-	public abstract Move determineMove(Board board);
-	
-	/*
-	 * Commands
-	 */
-	
-	//TODO
-	public void makeMove(Board board)	{
-		
-	}
-	
-	/*
 	 * Getters and setters
 	 */
 	
