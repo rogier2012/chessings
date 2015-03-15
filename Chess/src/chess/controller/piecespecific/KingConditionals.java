@@ -1,7 +1,6 @@
 package chess.controller.piecespecific;
 
 import chess.model.*;
-import chess.Position;
 import chess.controller.*;
 
 public class KingConditionals {

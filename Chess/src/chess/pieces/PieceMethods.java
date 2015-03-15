@@ -1,8 +1,6 @@
 package chess.pieces;
 
-import chess.Move;
-import chess.Position;
-import chess.boards.*;
+import chess.*;
 
 public class PieceMethods {
 

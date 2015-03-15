@@ -1,10 +1,9 @@
 package chess.controller;
 
 import chess.Color;
-import chess.Position;
-import chess.boards.Board;
-import chess.boards.ChessPiece;
-import chess.boards.Pawn;
+import chess.view.*;
+import chess.model.*;
+import chess.model.pieces.*;
 
 public class BoardControllerMethods {
 	/*

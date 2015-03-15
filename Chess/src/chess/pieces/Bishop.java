@@ -1,7 +1,6 @@
 package chess.pieces;
 
 import chess.*;
-import chess.boards.*;
 import chess.pieces.*;
 
 public class Bishop extends ChessPiece {

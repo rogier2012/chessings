@@ -1,7 +1,10 @@
 package chess.view;
 
+import chess.Color;
 import chess.Position;
-import chess.boards.Board;
+import chess.model.*;
+import chess.controller.*;
+import chess.model.pieces.*;
 
 public class BoardViewMethods {
 	
@@ -53,7 +56,7 @@ public class BoardViewMethods {
 	private static final String NUMBERINGRANKS = "  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  "
 			+ "" + "\n" + "\n";
 	
-	public static String test(chess.boards.Board board)	{
+	public static String test(Board board)	{
 		int rowCounter = 8;
 		boolean insertRowCounter;
 
@@ -120,6 +123,19 @@ public class BoardViewMethods {
 			System.out.println("I'm trying to print an invalid piece byte representation!");
 		}
 		return res;
+		
+			
+//	public String tostring(ChessPiece piece) {
+//	String result;
+//		if (piece.getColor().equals(Color.WHITE)) {
+//				result = "| W";
+//			} else if (piece.getColor().equals(Color.BLACK)) {
+//				result = "| B";
+//			} else {
+//				result = "Unknown!";
+//			}
+//			return result;
+//		}
 	}
 	
 }
