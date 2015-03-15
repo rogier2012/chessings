@@ -13,6 +13,7 @@ public class Pawn extends ChessPiece{
 	
 	public Pawn(Color color, int rank, int file)	{
 		super(color, rank, file);
+
 		firstMoveDone = false;
 		secondMoveDone = false;
 	}
