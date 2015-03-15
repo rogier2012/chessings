@@ -6,8 +6,8 @@ public class Rook extends ChessPiece{
 	
 	private boolean firstMoveDone;
 	
-	public Rook(Color color, int rank, int file)	{
-		super(color, rank, file);
+	public Rook(Color color, Position position)	{
+		super(color, position);
 		
 		this.firstMoveDone = false;
 	}

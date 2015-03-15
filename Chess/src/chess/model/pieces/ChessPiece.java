@@ -9,9 +9,9 @@ public abstract class ChessPiece {
 	private Color color;
 	private Position position;
 
-	public ChessPiece(Color color, int rank, int file){
+	public ChessPiece(Color color, Position position){
 		this.color = color;
-		position = new Position(rank, file);
+		this.position = position;
 	}
 	
 	public Position getPosition() {

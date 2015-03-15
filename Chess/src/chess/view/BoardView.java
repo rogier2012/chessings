@@ -54,7 +54,7 @@ public class BoardView {
 			+ "" + "\n" + "\n";
 	
 	public static String toString(Board board)	{
-		int rowCounter = 8;
+		int rowCounter = Board.RANKS;
 		boolean insertRowCounter;
 
 		String s = "";

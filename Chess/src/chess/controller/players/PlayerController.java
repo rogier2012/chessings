@@ -10,6 +10,7 @@ public abstract class PlayerController {
 	
 	//TODO
 	public void makeMove(Player player, Board board)	{
+		Move move = determineMove(board);
 		
 	}
 	

@@ -11,8 +11,8 @@ public class Pawn extends ChessPiece{
 	private boolean firstMoveDone;
 	private boolean secondMoveDone;
 	
-	public Pawn(Color color, int rank, int file)	{
-		super(color, rank, file);
+	public Pawn(Color color, Position position)	{
+		super(color, position);
 
 		firstMoveDone = false;
 		secondMoveDone = false;

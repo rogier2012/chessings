@@ -3,7 +3,8 @@ package chess.controller;
 import chess.model.Board;
 import chess.model.Color;
 import chess.model.Position;
-import chess.model.pieces.Pawn;
+import chess.model.pieces.*;
+import chess.model.moves.*;
 
 public class BoardController {
 	
@@ -57,7 +58,7 @@ public class BoardController {
 		board.getWhitePawnList().clear();
 		Pawn pawn;
 		for (int file = 0; file < Board.FILES; file++)	{
-			pawn = new Pawn(chess.model.Color.WHITE, WHITEPAWNRANK, file);
+			pawn = new Pawn(Color.WHITE, new Position(WHITEPAWNRANK, file));
 			setPawnInList(pawn, board);
 		}
 	}
@@ -66,7 +67,7 @@ public class BoardController {
 		board.getBlackPawnList().clear();
 		Pawn pawn;
 		for (int file = 0; file < Board.FILES; file++)	{
-			pawn = new Pawn(chess.model.Color.BLACK, BLACKPAWNRANK, file);
+			pawn = new Pawn(Color.BLACK, new Position(BLACKPAWNRANK, file));
 			setPawnInList(pawn, board);
 		}
 	}
@@ -162,4 +163,31 @@ public class BoardController {
 			board.getWhitePawnList().add(pawn);
 		}
 	}
+	
+	/*
+	 * Executes a move in board. Even if it is invalid.
+	 */
+	public void executeMove(Move move, Board board)	{
+		executeMoveInFields(move.getInitial(), move.getEnd(), board);
+		executeMoveInSets(move.getInitial(), move.getEnd(), board);
+	}
+	
+	
+	/*
+	 * Executes a move in the fields matrix in board. Even if it is invalid.
+	 * IMPORTANT: EXECUTE THIS AFTER CHANGING THE SETS
+	 */
+	public void executeMoveInFields(Position oldPosition, Position newPosition, Board board)	{
+		byte piece = board.getPiece(oldPosition);
+		board.setPiece(newPosition.getRank(), newPosition.getFile(), piece);
+	}
+	
+	/*
+	 * Executes a move in the set representation of board. Even if it is invalid.
+	 * IMPORTANT: EXECUTE THIS BEFORE CHANGING FIELDS
+	 */
+	public void executeMoveInSets(Position oldPosition, Position newPosition, Board board)	{
+		//TODO
+	}
+	
 }

@@ -10,6 +10,10 @@ public class HumanPlayer extends Player{
 		super(aName, aColor);
 	}
 
-	
+	public Move determineMove()	{
+		//TODO
+		
+		return null;
+	}
 
 }

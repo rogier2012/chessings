@@ -6,8 +6,8 @@ public class Knight extends ChessPiece {
 	
 	private boolean firstMoveDone;
 	
-	public Knight(Color color, int rank, int file)	{
-		super(color, rank, file);
+	public Knight(Color color, Position position)	{
+		super(color, position);
 		
 		this.firstMoveDone = false;
 	}

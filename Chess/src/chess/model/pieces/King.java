@@ -6,8 +6,8 @@ public class King extends ChessPiece {
 	
 	private boolean firstMoveDone;
 	
-	public King(Color color, int rank, int file)	{
-		super(color, rank, file);
+	public King(Color color, Position position)	{
+		super(color, position);
 		
 		firstMoveDone = false;
 	}
