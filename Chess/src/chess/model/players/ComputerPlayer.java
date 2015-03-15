@@ -3,6 +3,7 @@ package chess.model.players;
 import chess.model.*;
 import chess.model.pieces.*;
 import chess.model.strategies.*;
+import chess.model.moves.*;
 
 public class ComputerPlayer extends Player {
 	

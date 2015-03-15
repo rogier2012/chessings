@@ -2,7 +2,7 @@ package chess.model.players;
 
 import chess.model.Board;
 import chess.model.Color;
-import chess.model.Move;
+import chess.model.moves.*;
 
 public abstract class Player {
 	

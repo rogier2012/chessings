@@ -1,6 +1,7 @@
 package chess.model.players;
 
 import chess.model.*;
+import chess.model.moves.*;
 
 public class HumanPlayer extends Player{
 
