@@ -1,10 +1,9 @@
 package chess.view;
 
-import chess.model.*;
-import chess.controller.*;
-import chess.model.pieces.*;
+import chess.model.Board;
+import chess.model.Position;
 
-public class BoardViewMethods {
+public class BoardView {
 	
 	/*
 	 * Piece byte values
@@ -135,5 +134,6 @@ public class BoardViewMethods {
 //			return result;
 //		}
 	}
+	
 	
 }
