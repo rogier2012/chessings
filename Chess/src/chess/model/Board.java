@@ -21,8 +21,8 @@ public class Board {
 	public Board()	{
 		this.fields = new byte[RANKS][FILES];
 		
-		this.whitePawnList = new ArrayList<Pawn>();
-		this.blackPawnList = new ArrayList<Pawn>();
+		this.whitePawnList = new ArrayList<Pawn>(FILES);
+		this.blackPawnList = new ArrayList<Pawn>(FILES);
 	}
 	
 	public byte getPiece(Position pos) {

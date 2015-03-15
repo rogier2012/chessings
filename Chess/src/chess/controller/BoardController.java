@@ -58,7 +58,7 @@ public class BoardController {
 		Pawn pawn;
 		for (int file = 0; file < Board.FILES; file++)	{
 			pawn = new Pawn(chess.model.Color.WHITE, WHITEPAWNRANK, file);
-			setPawnInList(file, pawn, board);
+			setPawnInList(pawn, board);
 		}
 	}
 	
@@ -67,7 +67,7 @@ public class BoardController {
 		Pawn pawn;
 		for (int file = 0; file < Board.FILES; file++)	{
 			pawn = new Pawn(chess.model.Color.BLACK, BLACKPAWNRANK, file);
-			setPawnInList(file, pawn, board);
+			setPawnInList(pawn, board);
 		}
 	}
 	
@@ -152,14 +152,14 @@ public class BoardController {
 		return board.getPiece(position) != EMPTY;
 	}
 	
-	public void setPawnInList(int index, Pawn pawn, Board board)	{
+	public void setPawnInList(Pawn pawn, Board board)	{
 		boolean isWhite = pawn.getColor() == Color.WHITE;
 		boolean isBlack = pawn.getColor() == Color.BLACK;
 		
 		if (isWhite)	{
-			board.getWhitePawnList().set(index, pawn);
+			board.getWhitePawnList().add(pawn);
 		} else if (isBlack)	{
-			board.getWhitePawnList().set(index, pawn);
+			board.getWhitePawnList().add(pawn);
 		}
 	}
 }

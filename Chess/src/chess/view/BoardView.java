@@ -53,7 +53,7 @@ public class BoardView {
 	private static final String NUMBERINGRANKS = "  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  "
 			+ "" + "\n" + "\n";
 	
-	public static String test(Board board)	{
+	public static String toString(Board board)	{
 		int rowCounter = 8;
 		boolean insertRowCounter;
 
