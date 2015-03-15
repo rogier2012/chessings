@@ -1,6 +1,5 @@
 package chess.controller;
 
-import chess.Color;
 import chess.view.*;
 import chess.model.*;
 import chess.model.pieces.*;
@@ -54,19 +53,19 @@ public class BoardControllerMethods {
 	
 	public void resetWhitePawnList(Board board)	{
 		board.getWhitePawnList().clear();
-		ChessPiece pawn;
+		Pawn pawn;
 		for (int file = 0; file < Board.FILES; file++)	{
-			pawn = new Pawn(Color.WHITE, WHITEPAWNRANK, file);
-			board.setPawnInList(file, pawn);
+			pawn = new Pawn(chess.model.Color.WHITE, WHITEPAWNRANK, file);
+			setPawnInList(file, pawn, board);
 		}
 	}
 	
 	public void resetBlackPawnList(Board board)	{
 		board.getBlackPawnList().clear();
-		ChessPiece pawn;
+		Pawn pawn;
 		for (int file = 0; file < Board.FILES; file++)	{
-			pawn = new Pawn(Color.BLACK, BLACKPAWNRANK, file);
-			board.setPawnInList(file, pawn);
+			pawn = new Pawn(chess.model.Color.BLACK, BLACKPAWNRANK, file);
+			setPawnInList(file, pawn, board);
 		}
 	}
 	
@@ -130,7 +129,6 @@ public class BoardControllerMethods {
 		}
 	}
 	
-
 	public static boolean isValidRank(int rank) {
 		return rank >= 0 && rank < Board.RANKS;
 	}
@@ -150,6 +148,17 @@ public class BoardControllerMethods {
 	
 	public boolean isOccupied(Position position, Board board)	{
 		return board.getPiece(position) != EMPTY;
+	}
+	
+	public void setPawnInList(int index, Pawn pawn, Board board)	{
+		boolean isWhite = pawn.getColor() == Color.WHITE;
+		boolean isBlack = pawn.getColor() == Color.BLACK;
+		
+		if (isWhite)	{
+			board.getWhitePawnList().set(index, pawn);
+		} else if (isBlack)	{
+			board.getWhitePawnList().set(index, pawn);
+		}
 	}
 	
 }

@@ -1,7 +1,5 @@
 package chess.view;
 
-import chess.Color;
-import chess.Position;
 import chess.model.*;
 import chess.controller.*;
 import chess.model.pieces.*;

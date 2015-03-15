@@ -1,6 +1,11 @@
 package chess.pieces;
 
 import chess.*;
+import chess.model.*;
+import chess.model.pieces.*;
+import chess.controller.*;
+import chess.controller.piecespecific.*;
+import chess.view.*;
 
 public class PieceMethods {
 

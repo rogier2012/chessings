@@ -1,6 +1,9 @@
 package chess.model.pieces;
 
-import chess.*;
+import chess.model.*;
+import chess.controller.*;
+import chess.controller.piecespecific.*;
+import chess.view.*;
 
 public abstract class ChessPiece {
 	private Color color;

@@ -1,7 +1,9 @@
 package chess.model;
 
 import chess.*;
-import chess.pieces.*;
+import chess.model.pieces.*;
+import chess.view.*;
+import chess.controller.*;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -11,16 +13,16 @@ public class Board {
 	public static final int FILES = 8;
 	public static final int RANKS = 8;
 	
-	private List<ChessPiece> whitePawnList;
-	private List<ChessPiece> blackPawnList;
+	private List<Pawn> whitePawnList;
+	private List<Pawn> blackPawnList;
 	
 	private byte[][] fields;
 	
 	public Board()	{
 		this.fields = new byte[RANKS][FILES];
 		
-		this.whitePawnList = new ArrayList<ChessPiece>();
-		this.blackPawnList = new ArrayList<ChessPiece>();
+		this.whitePawnList = new ArrayList<Pawn>();
+		this.blackPawnList = new ArrayList<Pawn>();
 	}
 	
 	public byte getPiece(Position pos) {
@@ -31,11 +33,11 @@ public class Board {
 		this.fields[rank][file] = piece;
 	}
 
-	public List<ChessPiece> getWhitePawnList()	{
+	public List<Pawn> getWhitePawnList()	{
 		return this.whitePawnList;
 	}
 	
-	public List<ChessPiece> getBlackPawnList()	{
+	public List<Pawn> getBlackPawnList()	{
 		return this.blackPawnList;
 	}
 }

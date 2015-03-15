@@ -1,6 +1,7 @@
 package chess.pieces;
 
 import chess.*;
+import chess.model.*;
 
 public abstract class ChessPiece {
 	private Color color;
@@ -11,7 +12,6 @@ public abstract class ChessPiece {
 		this.color = color;
 		position = new Position(rank, file);
 	}
-	
 	
 	public String toString() {
 		String toReturn;

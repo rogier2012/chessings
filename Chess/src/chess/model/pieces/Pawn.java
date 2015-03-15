@@ -1,7 +1,10 @@
 package chess.model.pieces;
 
-import chess.*;
-import chess.Position;
+import chess.model.*;
+import chess.model.pieces.*;
+import chess.controller.*;
+import chess.controller.piecespecific.*;
+import chess.view.*;
 
 public class Pawn extends ChessPiece{
 	
