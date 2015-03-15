@@ -1,4 +1,8 @@
-package chess;
+package chess.model.players;
+
+import chess.model.Board;
+import chess.model.Color;
+import chess.model.Move;
 
 public abstract class Player {
 	
@@ -22,19 +26,20 @@ public abstract class Player {
 	 * Queries
 	 */
 	
-    public abstract Move determineMove(Board board);
+	//TODO
+	public abstract Move determineMove(Board board);
 	
 	/*
 	 * Commands
 	 */
-    
-    public void makeMove(Board board)	{
-    	Move keuze = determineMove(board);
-    	
-    }
+	
+	//TODO
+	public void makeMove(Board board)	{
+		
+	}
 	
 	/*
-	 * Getters and Setters
+	 * Getters and setters
 	 */
 	
 	public String getName() {
@@ -52,6 +57,4 @@ public abstract class Player {
 	public void setColor(Color color) {
 		this.color = color;
 	}
-	
-	
 }

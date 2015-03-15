@@ -1,4 +1,4 @@
-package chess;
+package chess.model;
 
 public class Move {
 	
@@ -15,4 +15,5 @@ public class Move {
 	public Position getEnd() {
 		return endPoint;
 	}
+	
 }

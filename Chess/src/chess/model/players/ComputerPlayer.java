@@ -1,4 +1,8 @@
-package chess;
+package chess.model.players;
+
+import chess.model.*;
+import chess.model.pieces.*;
+import chess.model.strategies.*;
 
 public class ComputerPlayer extends Player {
 	
@@ -68,8 +72,7 @@ public class ComputerPlayer extends Player {
 	public void setColor(Color color) {
 		this.color = color;
 	}
-	
-	
-	
-	
 }
+	
+	
+	
