@@ -1,5 +1,6 @@
 package chess.model.players;
 
+import chess.*;
 import chess.model.*;
 import chess.model.moves.*;
 

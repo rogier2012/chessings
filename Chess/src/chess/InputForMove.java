@@ -1,6 +1,7 @@
 package chess;
 
 import java.io.*;
+import chess.model.*;
 
 public class InputForMove {
 	

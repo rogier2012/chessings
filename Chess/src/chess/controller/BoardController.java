@@ -1,10 +1,12 @@
 package chess.controller;
 
-import chess.view.*;
-import chess.model.*;
-import chess.model.pieces.*;
+import chess.model.Board;
+import chess.model.Color;
+import chess.model.Position;
+import chess.model.pieces.Pawn;
 
-public class BoardControllerMethods {
+public class BoardController {
+	
 	/*
 	 * Piece byte values
 	 * 
@@ -160,5 +162,4 @@ public class BoardControllerMethods {
 			board.getWhitePawnList().set(index, pawn);
 		}
 	}
-	
 }

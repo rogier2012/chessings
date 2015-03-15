@@ -3,6 +3,7 @@ package chess.model;
 import chess.model.pieces.*;
 import chess.model.players.*;
 import chess.model.strategies.*;
+import chess.controller.*;
 
 public class Game {
 	
@@ -17,6 +18,7 @@ public class Game {
 	 */
 	
 	private Board board;
+	private BoardController boardController;
 	
 	private int current;
 	
@@ -55,6 +57,14 @@ public class Game {
 
 	public void setPlayers(Player[] players) {
 		this.players = players;
+	}
+
+	public BoardController getBoardController() {
+		return boardController;
+	}
+
+	public void setBoardController(BoardController boardController) {
+		this.boardController = boardController;
 	}
 	
 }

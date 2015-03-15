@@ -6,9 +6,9 @@ public class GameController {
 	
 	public void play(Game game){
 		boolean doorgaan = true;
-		game.getBoard().reset();
+		game.getBoardController().reset(game.getBoard());
 		while (doorgaan){
-			game.getPlayers()[current].makeMove(game.getBoard());
+			game.getPlayers()[game.getCurrent()].makeMove(game.getBoard());
 		}
 	}
 	

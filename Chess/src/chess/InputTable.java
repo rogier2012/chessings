@@ -2,6 +2,8 @@ package chess;
 
 import java.util.HashMap;
 
+import chess.model.*;
+
 public class InputTable {
 	public HashMap<Integer, Integer> ranks;
 	public HashMap<String, Integer> files;
