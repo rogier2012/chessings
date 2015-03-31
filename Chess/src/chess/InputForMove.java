@@ -16,6 +16,7 @@ public class InputForMove {
 		Position[] move = new Position[2];
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		String input = null;
+		System.out.println("Please make a move");
 		try {
 			input = reader.readLine();
 		} catch (IOException e) {
