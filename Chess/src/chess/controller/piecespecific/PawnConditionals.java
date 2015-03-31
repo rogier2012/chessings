@@ -1,7 +1,6 @@
 package chess.controller.piecespecific;
 
 import chess.controller.BoardController;
-import chess.controller.PositionController;
 import chess.model.*;
 import chess.view.*;
 
@@ -15,7 +14,7 @@ public class PawnConditionals {
 		if (isWhite) {
 			Position newPos = new Position(position.getRank() + 1, position.getFile());
 
-			if (PositionController.isWithinRange(newPos)){
+			if (board.isOccupied(newPos)){
 				if (board.getPiece(newPos) == 0) {
 					result = true;
 				}
@@ -26,7 +25,7 @@ public class PawnConditionals {
 		else {
 			Position newPos = new Position(position.getRank() - 1, position.getFile());
 			
-			if (PositionController.isWithinRange(newPos)){
+			if (board.isOccupied(newPos)){
 				if (board.getPiece(newPos) == 0) {
 					result = true;
 				}
@@ -41,14 +40,14 @@ public class PawnConditionals {
 		if (canMoveOneForward(position, board)) {
 			if (isWhite) {
 				Position newPosition = new Position(position.getRank() + 2, position.getFile());
-				if (PositionController.isWithinRange(newPosition)) {
+				if (board.isOccupied(newPosition)) {
 					if (board.getPiece(newPosition) == 0) {
 						result = true;
 					}
 				}
 			} else {
 				Position newPosition = new Position(position.getRank() - 2, position.getFile());
-				if (PositionController.isWithinRange(newPosition)) {
+				if (board.isOccupied(newPosition)) {
 					if (board.getPiece(newPosition) == 0) {
 						result = true;
 					}
@@ -71,14 +70,14 @@ public class PawnConditionals {
 		// For the right and left side we assume white's POV
 		if (isWhite) {
 			Position newPos = new Position(position.getRank() + 1, position.getFile() - 1);
-			if (PositionController.isWithinRange(newPos)) {
+			if (board.isOccupied(newPos)) {
 				if (board.getPiece(newPos) != 0 && (board.getPiece(newPos) % 2) == 0) {
 					result = true;
 				}
 			}
 		} else {
 			Position newPos = new Position(position.getRank() - 1, position.getFile() - 1);
-			if (PositionController.isWithinRange(newPos)) {
+			if (board.isOccupied(newPos)) {
 				if (board.getPiece(newPos) != 0 && (board.getPiece(newPos) % 2) == 1) {
 					result = true;
 				}
