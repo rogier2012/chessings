@@ -1,6 +1,7 @@
 package chess.controller.piecespecific;
 
 import chess.controller.BoardController;
+import chess.controller.PositionController;
 import chess.model.*;
 import chess.view.*;
 
@@ -14,7 +15,23 @@ public class PawnConditionals {
 	
 	public boolean canMoveTwoForward(Position position, Board board)	{
 		boolean isWhite = board.getPiece(position) == BoardController.WHITEPAWN;
-		//TODO
+		boolean result = false;
+		
+		if (isWhite) {
+			Position newPosition = new Position(position.getRank() + 2, position.getFile());
+			if (PositionController.isWithinRange(newPosition)) {
+				if (board.getPiece(newPosition) == 0) {
+					result = true;
+				}
+			}
+		} else {
+			Position newPosition = new Position(position.getRank() - 2, position.getFile());
+			if (PositionController.isWithinRange(newPosition)) {
+				if (board.getPiece(newPosition) == 0) {
+					result = true;
+				}
+			}
+		}
 		return false;
 	}
 	
