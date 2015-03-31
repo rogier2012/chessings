@@ -132,27 +132,6 @@ public class BoardController {
 		}
 	}
 	
-	public static boolean isValidRank(int rank) {
-		return rank >= 0 && rank < Board.RANKS;
-	}
-
-	public static boolean isValidFile(int file) {
-		return file >= 0 && file < Board.FILES;
-	}
-
-	public static boolean isWithinBoard(int rank, int file) {
-		return isValidRank(rank) && isValidFile(file);
-	}
-
-	public static boolean isWithinBoard(Position position) {
-		return isValidRank(position.getRank())
-				&& isValidFile(position.getFile());
-	}
-	
-	public boolean isOccupied(Position position, Board board)	{
-		return board.getPiece(position) != EMPTY;
-	}
-	
 	public void setPawnInList(Pawn pawn, Board board)	{
 		boolean isWhite = pawn.getColor() == Color.WHITE;
 		boolean isBlack = pawn.getColor() == Color.BLACK;

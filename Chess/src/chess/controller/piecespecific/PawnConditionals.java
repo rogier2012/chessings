@@ -13,19 +13,20 @@ public class PawnConditionals {
 		
 		// Pawn is white
 		if (isWhite) {
-			if (position.getRank() + 1 < board.RANKS && position.getFile() < board.FILES){
-				Position newPos = new Position(position.getRank() + 1, position.getFile());
+			Position newPos = new Position(position.getRank() + 1, position.getFile());
+
+			if (PositionController.isWithinRange(newPos)){
 				if (board.getPiece(newPos) == 0) {
 					result = true;
 				}
 			}
-				
 		} 
 		
 		// Pawn is black
 		else {
-			if (position.getRank() - 1 >= 0 && position.getFile() < board.FILES){
-				Position newPos = new Position(position.getRank() - 1, position.getFile());
+			Position newPos = new Position(position.getRank() - 1, position.getFile());
+			
+			if (PositionController.isWithinRange(newPos)){
 				if (board.getPiece(newPos) == 0) {
 					result = true;
 				}
@@ -66,9 +67,24 @@ public class PawnConditionals {
 	
 	public boolean canCaptureLeft(Position position, Board board)	{
 		boolean isWhite = board.getPiece(position) == BoardController.WHITEPAWN;
+		boolean result = false;
 		// For the right and left side we assume white's POV
-		//TODO
-		return false;
+		if (isWhite) {
+			Position newPos = new Position(position.getRank() + 1, position.getFile() - 1);
+			if (PositionController.isWithinRange(newPos)) {
+				if (board.getPiece(newPos) != 0 && (board.getPiece(newPos) % 2) == 0) {
+					result = true;
+				}
+			}
+		} else {
+			Position newPos = new Position(position.getRank() - 1, position.getFile() - 1);
+			if (PositionController.isWithinRange(newPos)) {
+				if (board.getPiece(newPos) != 0 && (board.getPiece(newPos) % 2) == 1) {
+					result = true;
+				}
+			}
+		}
+		return result;
 	}
 	
 	public boolean canEnPassantRight(Position position, Board board)	{
