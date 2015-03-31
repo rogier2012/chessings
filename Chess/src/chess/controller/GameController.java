@@ -37,12 +37,12 @@ public class GameController {
 					nextMove = game.getHumanPlayerController().determineMove(game.getBoard(), (HumanPlayer) currentPlayer);
 				}
 				// Check if the move is valid
-				playerDidValidMove = isValidMove(game, nextMove);
+				playerDidValidMove = game.isValidMove(game, nextMove);
 			}
 			// Execute the valid move
 			executeMove(game, nextMove);
 			// Check if we should continue the game
-			doorgaan = !gameOver(game);
+			doorgaan = !game.gameOver(game);
 		}
 	}
 	
@@ -51,16 +51,6 @@ public class GameController {
 	 */
 	public void executeMove(Game game, Move move)	{
 		game.getBoardController().executeMove(move, game.getBoard());
-	}
-		
-	private boolean gameOver(Game game)	{
-		// TODO : Checks if the game ended
-		return false;
-	}
-	
-	private boolean isValidMove(Game game, Move move)	{
-		// TODO : Checks if the suggested move is valid
-		return true;
 	}
 	
 }

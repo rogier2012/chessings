@@ -1,5 +1,6 @@
 package chess.model;
 
+import chess.model.moves.Move;
 import chess.model.pieces.*;
 import chess.model.players.*;
 import chess.model.strategies.*;
@@ -43,6 +44,20 @@ public class Game {
 		boardController = new BoardController();
 		humanPlayerController = new HumanPlayerController();
 		computerPlayerController = new ComputerPlayerController();
+	}
+	
+	/*
+	 * Queries
+	 */
+	
+	public boolean gameOver(Game game)	{
+		// TODO : Checks if the game ended
+		return false;
+	}
+	
+	public boolean isValidMove(Game game, Move move)	{
+		// TODO : Checks if the suggested move is valid
+		return true;
 	}
 	
 	/*

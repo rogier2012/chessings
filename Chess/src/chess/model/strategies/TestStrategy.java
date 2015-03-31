@@ -24,8 +24,8 @@ public class TestStrategy implements Strategy {
 		Position begin;
 		Position end;
 		
-		begin = board.getWhitePawnList().get(4).getPosition();
-		end = new Position( 0, (int)System.currentTimeMillis()%8);
+		begin = new Position( (int)(Math.random()*8), (int)(Math.random()*8));
+		end = new Position( (int)(Math.random()*8), (int)(Math.random()*8));
 		
 		Move move = new Move(begin, end);
 		return move;
