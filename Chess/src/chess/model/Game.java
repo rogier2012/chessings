@@ -52,6 +52,33 @@ public class Game {
 	
 	public boolean gameOver(Game game)	{
 		// TODO : Checks if the game ended
+
+		/*
+		 * Check for win/loss
+		 * 	- white resignation
+		 * 	- black resignation
+		 * 	- white checkmate
+		 * 	- black checkmate
+		 */
+		
+		/*
+		 * Check for a draw
+		 * 	- No possible valid moves left for next player (stalemate)
+		 *  - Both players agree on a draw
+		 *  - Both players don't have enough pieces
+		 *  		* King v.s. King
+		 *  		* King v.s. King + Knight
+		 *  		* King v.s. King + Bishop
+		 *  		* King + Bishop v.s. King + Bishop (Bishops should share tile color)
+		 */
+		
+		/*
+		 * Ask player if he wants to end the game in a draw
+		 * 	- In 50 subsequent moves no pawns were moved or pieces were captured
+		 *  - 3 Subsequent moves of a certain player result in the same board configuration. The amount of possibilities for moves should be the same as well in each configuration!
+		 */
+		
+		
 		return false;
 	}
 	
