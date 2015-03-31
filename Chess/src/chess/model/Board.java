@@ -40,4 +40,24 @@ public class Board {
 	public List<Pawn> getBlackPawnList()	{
 		return this.blackPawnList;
 	}
+	public static boolean isValidRank(int rank) {
+		return rank >= 0 && rank < Board.RANKS;
+	}
+
+	public static boolean isValidFile(int file) {
+		return file >= 0 && file < Board.FILES;
+	}
+
+	public static boolean isWithinBoard(int rank, int file) {
+		return isValidRank(rank) && isValidFile(file);
+	}
+
+	public static boolean isWithinBoard(Position position) {
+		return isValidRank(position.getRank())
+				&& isValidFile(position.getFile());
+	}
+	
+	public boolean isOccupied(Position position)	{
+		return this.getPiece(position) != BoardController.EMPTY;
+	}
 }
