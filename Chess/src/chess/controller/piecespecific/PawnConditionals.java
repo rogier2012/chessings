@@ -8,8 +8,29 @@ public class PawnConditionals {
 	
 	public boolean canMoveOneForward(Position position, Board board)	{
 		boolean isWhite = board.getPiece(position) == BoardController.WHITEPAWN;
-		//TODO 
-		return false;
+		boolean result = false;
+		
+		// Pawn is white
+		if (isWhite) {
+			if (position.getRank() + 1 < board.RANKS && position.getFile() < board.FILES){
+				Position newPos = new Position(position.getRank() + 1, position.getFile());
+				if (board.getPiece(newPos) == 0) {
+					result = true;
+				}
+			}
+				
+		} 
+		
+		// Pawn is black
+		else {
+			if (position.getRank() - 1 >= 0 && position.getFile() < board.FILES){
+				Position newPos = new Position(position.getRank() - 1, position.getFile());
+				if (board.getPiece(newPos) == 0) {
+					result = true;
+				}
+			}
+		}
+		return result;
 	}
 	
 	public boolean canMoveTwoForward(Position position, Board board)	{
