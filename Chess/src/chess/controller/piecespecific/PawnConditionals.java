@@ -64,14 +64,19 @@ public class PawnConditionals {
 		// For the right and left side we assume white's POV
 		
 		if (isWhite) {
-			if (position.getRank() + 1 < board.RANKS && position.getFile() + 1 < board.FILES) {
-				Position newPos = new Position(position.getFile() + 1, position.getRank() + 1);
-//				if (board.getPiece(newPos)) {
-					
-//				}
+			Position newPos = new Position(position.getRank() + 1, position.getFile() + 1);
+			if (PositionController.isWithinRange(newPos)) {
+				if (board.getPiece(newPos) != 0 && (board.getPiece(newPos) % 2) == 0) {
+					result = true;
+				}
 			}
 		} else {
-			
+			Position newPos = new Position(position.getRank() - 1, position.getFile() + 1);
+			if (PositionController.isWithinRange(newPos)) {
+				if (board.getPiece(newPos) != 0 && (board.getPiece(newPos) % 2) == 1) {
+					result = true;
+				}
+			}
 		}
 		
 		
