@@ -2,14 +2,12 @@ package chess.controller.players;
 
 import chess.model.Board;
 import chess.model.moves.Move;
+import chess.model.players.*;
 
-public class ComputerPlayerController extends PlayerController {
-	
-	
-	@Override
-	public Move determineMove(Board board) {
-		// TODO Auto-generated method stub
-		return null;
+public class ComputerPlayerController {
+
+	public Move determineMove(Board board, ComputerPlayer player) {
+		return player.getStrategy().determineMove(board, player.getColor());
 	}
 	
 }

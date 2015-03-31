@@ -11,6 +11,15 @@ public class Move {
 		this.initialPoint = initialPoint;
 		this.endPoint = endPoint;
 	}
+	
+	public void setInitial(Position pos)	{
+		this.initialPoint = pos;
+	}
+	
+	public void setEnd(Position pos)	{
+		this.endPoint = pos;
+	}
+	
 	public Position getInitial() {
 		return initialPoint;
 	}

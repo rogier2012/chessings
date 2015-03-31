@@ -5,6 +5,7 @@ import chess.model.players.*;
 import chess.model.strategies.*;
 import chess.controller.players.*;
 import chess.controller.*;
+import chess.view.*;
 
 public class Game {
 	
@@ -20,11 +21,13 @@ public class Game {
 	
 	private Board board;
 	private BoardController boardController;
+	private BoardView boardView;
 	
 	private int current;
 	
 	private Player[] players;
-	private PlayerController playerController;
+	private HumanPlayerController humanPlayerController;
+	private ComputerPlayerController computerPlayerController;
 	
 	/*
 	 * Constructors
@@ -35,6 +38,11 @@ public class Game {
 		players[0] = player1;
 		players[1] = player2;
 		board = new Board();
+		
+		current = 0;
+		boardController = new BoardController();
+		humanPlayerController = new HumanPlayerController();
+		computerPlayerController = new ComputerPlayerController();
 	}
 	
 	/*
@@ -73,12 +81,28 @@ public class Game {
 		this.boardController = boardController;
 	}
 
-	public PlayerController getPlayerController() {
-		return playerController;
+	public HumanPlayerController getHumanPlayerController() {
+		return this.humanPlayerController;
+	}
+	
+	public ComputerPlayerController getComputerPlayerController()	{
+		return this.computerPlayerController;
+	}
+	
+	public void setHumanPlayerController(HumanPlayerController humanPlayerController)	{
+		this.humanPlayerController = humanPlayerController;
+	}
+	
+	public void setComputerPlayerController(ComputerPlayerController computerPlayerController) {
+		this.computerPlayerController = computerPlayerController;
 	}
 
-	public void setPlayerController(PlayerController playerController) {
-		this.playerController = playerController;
+	public BoardView getBoardView() {
+		return boardView;
+	}
+
+	public void setBoardView(BoardView boardView) {
+		this.boardView = boardView;
 	}
 	
 }

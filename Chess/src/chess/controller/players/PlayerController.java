@@ -6,12 +6,4 @@ import chess.model.moves.Move;
 
 public abstract class PlayerController {
 	
-	public abstract Move determineMove(Board board);
-	
-	//TODO
-	public void makeMove(Player player, Board board)	{
-		Move move = determineMove(board);
-		
-	}
-	
 }

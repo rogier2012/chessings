@@ -28,8 +28,8 @@ public class InputTable {
 		files.put("d", 3);
 		files.put("e", 4);
 		files.put("f", 5);
-		files.put("f", 6);
-		files.put("g", 7);
+		files.put("g", 6);
+		files.put("h", 7);
 	}
 	
 	public int[] getInt(String position){
