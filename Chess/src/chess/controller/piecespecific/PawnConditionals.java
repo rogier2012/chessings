@@ -59,9 +59,25 @@ public class PawnConditionals {
 	
 	public boolean canCaptureRight(Position position, Board board)	{
 		boolean isWhite = board.getPiece(position) == BoardController.WHITEPAWN;
+		boolean result = false;
 		// For the right and left side we assume white's POV
-		//TODO
-		return false;
+		
+		if (isWhite) {
+			if (position.getRank() + 1 < board.RANKS && position.getFile() + 1 < board.FILES) {
+				Position newPos = new Position(position.getFile() + 1, position.getRank() + 1);
+//				if (board.getPiece(newPos)) {
+					
+//				}
+			}
+		} else {
+			
+		}
+		
+		
+		
+		
+		
+		return result;
 	}
 	
 	public boolean canCaptureLeft(Position position, Board board)	{
