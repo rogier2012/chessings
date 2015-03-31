@@ -159,6 +159,9 @@ public class BoardController {
 	public void executeMoveInFields(Position oldPosition, Position newPosition, Board board)	{
 		byte piece = board.getPiece(oldPosition);
 		board.setPiece(newPosition.getRank(), newPosition.getFile(), piece);
+		
+		// Oude positie wel verwijderen!
+		board.setPiece(oldPosition.getRank(), oldPosition.getFile(), (byte) 0);
 	}
 	
 	/*

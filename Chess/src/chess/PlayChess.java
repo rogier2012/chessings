@@ -18,7 +18,7 @@ public class PlayChess {
 		
 		boardController.reset(board);
 		
-		ComputerPlayer one = new ComputerPlayer("Freek", Color.WHITE, new TestStrategy());
+		HumanPlayer one = new HumanPlayer("Freek", Color.WHITE);
 		ComputerPlayer two = new ComputerPlayer("Karel", Color.BLACK, new TestStrategy());
 		
 		Game game = new Game(one, two);
