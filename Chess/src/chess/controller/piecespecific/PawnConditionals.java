@@ -37,19 +37,20 @@ public class PawnConditionals {
 	public boolean canMoveTwoForward(Position position, Board board)	{
 		boolean isWhite = board.getPiece(position) == BoardController.WHITEPAWN;
 		boolean result = false;
-		
-		if (isWhite) {
-			Position newPosition = new Position(position.getRank() + 2, position.getFile());
-			if (PositionController.isWithinRange(newPosition)) {
-				if (board.getPiece(newPosition) == 0) {
-					result = true;
+		if (canMoveOneForward(position, board)) {
+			if (isWhite) {
+				Position newPosition = new Position(position.getRank() + 2, position.getFile());
+				if (PositionController.isWithinRange(newPosition)) {
+					if (board.getPiece(newPosition) == 0) {
+						result = true;
+					}
 				}
-			}
-		} else {
-			Position newPosition = new Position(position.getRank() - 2, position.getFile());
-			if (PositionController.isWithinRange(newPosition)) {
-				if (board.getPiece(newPosition) == 0) {
-					result = true;
+			} else {
+				Position newPosition = new Position(position.getRank() - 2, position.getFile());
+				if (PositionController.isWithinRange(newPosition)) {
+					if (board.getPiece(newPosition) == 0) {
+						result = true;
+					}
 				}
 			}
 		}
