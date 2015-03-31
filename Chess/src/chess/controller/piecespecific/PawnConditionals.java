@@ -64,14 +64,14 @@ public class PawnConditionals {
 		
 		if (isWhite) {
 			Position newPos = new Position(position.getRank() + 1, position.getFile() + 1);
-			if (PositionController.isWithinRange(newPos)) {
+			if (board.isOccupied(newPos)) {
 				if (board.getPiece(newPos) != 0 && (board.getPiece(newPos) % 2) == 0) {
 					result = true;
 				}
 			}
 		} else {
 			Position newPos = new Position(position.getRank() - 1, position.getFile() + 1);
-			if (PositionController.isWithinRange(newPos)) {
+			if (board.isOccupied(newPos)) {
 				if (board.getPiece(newPos) != 0 && (board.getPiece(newPos) % 2) == 1) {
 					result = true;
 				}
