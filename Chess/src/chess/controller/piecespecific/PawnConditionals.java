@@ -77,11 +77,6 @@ public class PawnConditionals {
 				}
 			}
 		}
-		
-		
-		
-		
-		
 		return result;
 	}
 	
