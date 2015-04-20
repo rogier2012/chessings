@@ -37,7 +37,7 @@ public class GameController {
 					nextMove = game.getHumanPlayerController().determineMove(game.getBoard(), (HumanPlayer) currentPlayer);
 				}
 				// Check if the move is valid
-				playerDidValidMove = game.isValidMove(game, nextMove);
+				playerDidValidMove = game.isValidMove(nextMove);
 			}
 			// Execute the valid move
 			executeMove(game, nextMove);

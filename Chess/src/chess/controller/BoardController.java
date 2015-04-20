@@ -2,6 +2,7 @@ package chess.controller;
 
 import chess.model.Board;
 import chess.model.Color;
+import chess.model.Game;
 import chess.model.Position;
 import chess.model.pieces.*;
 import chess.model.moves.*;
@@ -52,6 +53,7 @@ public class BoardController {
 		resetWhitePawnList(board);
 		resetBlackPawnList(board);
 		resetFields(board);
+		resetKingList(board);
 	}
 	
 	public void resetWhitePawnList(Board board)	{
@@ -69,6 +71,19 @@ public class BoardController {
 		for (int file = 0; file < Board.FILES; file++)	{
 			pawn = new Pawn(Color.BLACK, new Position(BLACKPAWNRANK, file));
 			setPawnInList(pawn, board);
+		}
+	}
+	
+	public void resetKingList(Board board)	{
+		board.getKingList().clear();
+		King king;
+		Color color = Color.WHITE;
+		Position positionWhiteKing = new Position(0, 3);
+		Position positionBlackKing = new Position((Board.FILES - 1), 3);
+		for (int index = 0; index < Game.PLAYERAMOUNT; index++)	{
+			if (color == Color.WHITE)	king = new King(color, positionWhiteKing);
+			if (color == Color.BLACK)	king = new King(color, positionBlackKing);
+			color = color.other();
 		}
 	}
 	
@@ -139,7 +154,7 @@ public class BoardController {
 		if (isWhite)	{
 			board.getWhitePawnList().add(pawn);
 		} else if (isBlack)	{
-			board.getWhitePawnList().add(pawn);
+			board.getBlackPawnList().add(pawn);
 		}
 	}
 	

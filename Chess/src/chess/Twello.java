@@ -11,6 +11,11 @@ public class Twello {
 	/*
 	 * Uw uitlaatklep voor alle grappen, grollen, meligheden en gedoe. Klasse.
 	 */
+	
+	
+	public interface rekt	{
+		public static boolean rekt = true;
+	}
 
 }
 

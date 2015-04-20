@@ -16,8 +16,8 @@ public class InputTable {
 	}
 	
 	public void fillRanks(){
-		for (int i = 0; i < Board.RANKS; i++){
-			ranks.put(Board.RANKS-i, i);
+		for (int i = 1; i <= Board.RANKS; i++){
+			ranks.put(i, i - 1);
 		}
 	}
 	
@@ -37,6 +37,8 @@ public class InputTable {
 		int[] result = new int[2];
 		result[0] = ranks.get(Integer.parseInt(separate[1]));
 		result[1] = files.get(separate[0]);
+		
+		System.out.println(result[0] + " : " + result[1]);
 		return result;
 	}
 }

@@ -16,7 +16,6 @@ public class PawnConditionals {
 		// Pawn is white
 		if (isWhite) {
 			Position newPos = new Position(position.getRank() + 1, position.getFile());
-
 			if (board.isWithinBoard(newPos)){
 				if (!board.isOccupied(newPos)) {
 					result = true;
@@ -26,8 +25,7 @@ public class PawnConditionals {
 		
 		// Pawn is black
 		else {
-			Position newPos = new Position(position.getRank() - 1, position.getFile());
-			
+			Position newPos = new Position(position.getRank() - 1, position.getFile());			
 			if (board.isWithinBoard(newPos)){
 				if (!board.isOccupied(newPos)) {
 					result = true;
@@ -57,7 +55,7 @@ public class PawnConditionals {
 				}
 			}
 		}
-		return false;
+		return result;
 	}
 	
 	public boolean canCaptureRight(Position position, Board board)	{

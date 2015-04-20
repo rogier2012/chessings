@@ -82,8 +82,12 @@ public class Game {
 		return false;
 	}
 	
-	public boolean isValidMove(Game game, Move move)	{
+	public boolean isValidMove(Move move)	{
 		// TODO : Checks if the suggested move is valid
+		byte bPiece = this.getBoard().getPiece(move.getInitial());
+		ChessPiece piece = this.getBoard().getChessPiece(bPiece, move.getInitial());
+
+//		return piece.canMove(move);
 		return true;
 	}
 	

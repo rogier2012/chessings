@@ -1,6 +1,7 @@
 package chess.model.pieces;
 
 import chess.model.*;
+import chess.model.moveoptions.MoveOption;
 import chess.model.pieces.*;
 import chess.controller.*;
 import chess.controller.piecespecific.*;
@@ -13,7 +14,13 @@ public class Pawn extends ChessPiece{
 	
 	public Pawn(Color color, Position position)	{
 		super(color, position);
-
+		
+		// Set moveOptions
+		this.getMoveOptions().add(new MoveOption(1, 1, 1));
+		this.getMoveOptions().add(new MoveOption(1, 0, 1));
+		this.getMoveOptions().add(new MoveOption(2, 0, 1));
+		this.getMoveOptions().add(new MoveOption(1, -1, 1));
+		
 		firstMoveDone = false;
 		secondMoveDone = false;
 	}
