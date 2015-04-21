@@ -62,7 +62,7 @@ public class BoardView {
 		for (int rank = Board.RANKS - 1; rank >= 0 ; rank--) {
 			String row = "";
 			insertRowCounter = true;
-			for (int file = Board.FILES - 1; file >= 0 ; file--) {
+			for (int file = 0; file < Board.FILES ; file++) {
 				Position p = new Position(rank, file);
 				if (board.getPiece(p) == 0) {
 					if (insertRowCounter) {

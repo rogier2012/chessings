@@ -60,14 +60,14 @@ public class MoveOption {
 		int c2 = 0;
 		if (equalSigns(v1, v2))	{
 			if (separateMultiples(v1, v2))	{
-				while(v2[0] != 0 && v2[1] != 0)	{
-					if (v2[0] != 0)	{
+				while(v2[0] != 0 || v2[1] != 0)	{
+					if (v2[0] != 0 || v1[0] == 0)	{
 						v2[0] = v2[0] - v1[0];
-						c1++;
+						c1+=1;
 					}
-					if (v2[1] != 0)	{
-						v2[1] = v2[1] - v1[0];
-						c2++;
+					if (v2[1] != 0 || v1[1] == 0)	{
+						v2[1] = v2[1] - v1[1];
+						c2+=1;
 					}
 				}
 				return (c1 == c2) && c1 <= this.range;
@@ -96,8 +96,6 @@ public class MoveOption {
 		if (v1[0] == 0 && v2[0] == 0 && v1[1] == 0 && v2[1] == 0)	return true;
 		if (v1[0] == 0 && v2[0] == 0)	return v2[1]%v1[1] == 0;
 		return v2[0]%v1[0] == 0;
-		// Ik wil bij deze mezelf de maker benoemen van misschien wel de lelijkste methode ooit.
-		// Maar hij doet!
 	}
 	
 	/*

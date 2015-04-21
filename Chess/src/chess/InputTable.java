@@ -37,8 +37,6 @@ public class InputTable {
 		int[] result = new int[2];
 		result[0] = ranks.get(Integer.parseInt(separate[1]));
 		result[1] = files.get(separate[0]);
-		
-		System.out.println(result[0] + " : " + result[1]);
 		return result;
 	}
 }

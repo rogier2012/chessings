@@ -104,9 +104,9 @@ public class BoardController {
 		file++;
 		board.setPiece(WHITEPIECERANK, file, WHITEBISHOP);
 		file++;
-		board.setPiece(WHITEPIECERANK, file, WHITEQUEEN);
-		file++;
 		board.setPiece(WHITEPIECERANK, file, WHITEKING);
+		file++;
+		board.setPiece(WHITEPIECERANK, file, WHITEQUEEN);
 		file++;
 		board.setPiece(WHITEPIECERANK, file, WHITEBISHOP);
 		file++;
