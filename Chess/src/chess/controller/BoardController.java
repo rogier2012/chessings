@@ -4,8 +4,13 @@ import chess.model.Board;
 import chess.model.Color;
 import chess.model.Game;
 import chess.model.Position;
-import chess.model.pieces.*;
-import chess.model.moves.*;
+import chess.model.moves.Move;
+import chess.model.pieces.Bishop;
+import chess.model.pieces.King;
+import chess.model.pieces.Knight;
+import chess.model.pieces.Pawn;
+import chess.model.pieces.Queen;
+import chess.model.pieces.Rook;
 
 public class BoardController {
 	
@@ -50,10 +55,14 @@ public class BoardController {
 	public static final int BLACKPAWNRANK = BLACKPIECERANK - 1;
 	
 	public void reset(Board board)	{
-		resetWhitePawnList(board);
-		resetBlackPawnList(board);
-		resetFields(board);
-		resetKingList(board);
+		this.resetWhitePawnList(board);
+		this.resetBlackPawnList(board);
+		this.resetFields(board);
+		this.resetKingList(board);
+		this.resetQueenList(board);
+		this.resetBishopList(board);
+		this.resetKnightList(board);
+		this.resetRookList(board);
 	}
 	
 	public void resetWhitePawnList(Board board)	{
@@ -76,15 +85,54 @@ public class BoardController {
 	
 	public void resetKingList(Board board)	{
 		board.getKingList().clear();
-		King king;
+		King king = null;
 		Color color = Color.WHITE;
 		Position positionWhiteKing = new Position(0, 3);
 		Position positionBlackKing = new Position((Board.FILES - 1), 3);
 		for (int index = 0; index < Game.PLAYERAMOUNT; index++)	{
 			if (color == Color.WHITE)	king = new King(color, positionWhiteKing);
 			if (color == Color.BLACK)	king = new King(color, positionBlackKing);
+			board.getKingList().add(king);
 			color = color.other();
 		}
+	}
+	
+	public void resetQueenList(Board board)	{
+		board.getQueenList().clear();
+		Queen queen = null;
+		Color color = Color.WHITE;
+		Position positionWhiteQueen = new Position(0, 4);
+		Position positionBlackQueen = new Position((Board.RANKS - 1), 4);
+		for (int index = 0; index < Game.PLAYERAMOUNT; index++)	{
+			if (color == Color.WHITE) queen = new Queen(color, positionWhiteQueen);
+			if (color == Color.BLACK) queen = new Queen(color, positionBlackQueen);
+			board.getQueenList().add(queen);
+			color = color.other();
+		}
+	}
+	
+	public void resetBishopList(Board board)	{
+		board.getBishopList().clear();
+		board.getBishopList().add(new Bishop(Color.WHITE, new Position(0, 2)));
+		board.getBishopList().add(new Bishop(Color.WHITE, new Position(0, 5)));
+		board.getBishopList().add(new Bishop(Color.BLACK, new Position(Board.RANKS - 1, 2)));
+		board.getBishopList().add(new Bishop(Color.BLACK, new Position(Board.RANKS - 1, 5)));
+	}
+	
+	public void resetKnightList(Board board)	{
+		board.getKnightList().clear();
+		board.getKnightList().add(new Knight(Color.WHITE, new Position(0, 1)));
+		board.getKnightList().add(new Knight(Color.WHITE, new Position(0, 6)));
+		board.getKnightList().add(new Knight(Color.BLACK, new Position(Board.RANKS - 1, 1)));
+		board.getKnightList().add(new Knight(Color.BLACK, new Position(Board.RANKS - 1, 6)));
+	}
+	
+	public void resetRookList(Board board)	{
+		board.getRookList().clear();
+		board.getRookList().add(new Rook(Color.WHITE, new Position(0, 0)));
+		board.getRookList().add(new Rook(Color.WHITE, new Position(0, 7)));
+		board.getRookList().add(new Rook(Color.BLACK, new Position(Board.RANKS - 1, 0)));
+		board.getRookList().add(new Rook(Color.BLACK, new Position(Board.RANKS - 1, 7)));
 	}
 	
 	public void resetFields(Board board)	{
@@ -158,18 +206,18 @@ public class BoardController {
 		}
 	}
 	
-	/*
+	/**
 	 * Executes a move in board. Even if it is invalid.
 	 */
 	public void executeMove(Move move, Board board)	{
 		executeMoveInFields(move.getInitial(), move.getEnd(), board);
-		executeMoveInSets(move.getInitial(), move.getEnd(), board);
+		executeMoveInLists(move.getInitial(), move.getEnd(), board);
 	}
 	
 	
-	/*
+	/**
 	 * Executes a move in the fields matrix in board. Even if it is invalid.
-	 * IMPORTANT: EXECUTE THIS AFTER CHANGING THE SETS
+	 * IMPORTANT: EXECUTE THIS AFTER CHANGING THE LISTS
 	 */
 	public void executeMoveInFields(Position oldPosition, Position newPosition, Board board)	{
 		byte piece = board.getPiece(oldPosition);
@@ -179,11 +227,21 @@ public class BoardController {
 		board.setPiece(oldPosition.getRank(), oldPosition.getFile(), (byte) 0);
 	}
 	
-	/*
+	/**
 	 * Executes a move in the set representation of board. Even if it is invalid.
 	 * IMPORTANT: EXECUTE THIS BEFORE CHANGING FIELDS
 	 */
-	public void executeMoveInSets(Position oldPosition, Position newPosition, Board board)	{
+	public void executeMoveInLists(Position oldPosition, Position newPosition, Board board)	{
+		byte bPiece = board.getPiece(oldPosition);
+		
+		// Look for the list which has to be altered 
+		
+		// Look in the list which piece has to be moved
+		
+		// Alter piece position
+		
+		// Alter piece specific instance variables (e.g. boolean firstMoveDone)
+		
 		//TODO
 	}
 	

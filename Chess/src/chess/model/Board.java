@@ -135,10 +135,8 @@ public class Board {
 		// Is it a king?
 		} else if (bPiece == BoardController.WHITEKING || bPiece == BoardController.BLACKKING)	{
 			for (King king : this.kingList)	{
-				System.out.println("hi");
 				System.out.println(king.getPosition().toString()  + " : " + position.toString());
 				if (king.getPosition().getRank() == position.getRank() && king.getPosition().getFile() == position.getFile())	{
-					System.out.println("HAY");
 					return king;
 				}
 			}
