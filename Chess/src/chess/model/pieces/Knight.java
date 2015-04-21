@@ -1,6 +1,8 @@
 package chess.model.pieces;
 
-import chess.model.*;
+import chess.model.Color;
+import chess.model.Position;
+import chess.model.moveoptions.MoveOption;
 
 public class Knight extends ChessPiece {
 	
@@ -8,6 +10,16 @@ public class Knight extends ChessPiece {
 	
 	public Knight(Color color, Position position)	{
 		super(color, position);
+		
+		// Set MoveOptions
+		this.getMoveOptions().add(new MoveOption(1, 2, 1));
+		this.getMoveOptions().add(new MoveOption(2, 1, 1));
+		this.getMoveOptions().add(new MoveOption(-1, 2, 1));
+		this.getMoveOptions().add(new MoveOption(2, -1, 1));
+		this.getMoveOptions().add(new MoveOption(1, -2, 1));
+		this.getMoveOptions().add(new MoveOption(-2, 1, 1));
+		this.getMoveOptions().add(new MoveOption(-1, -2, 1));
+		this.getMoveOptions().add(new MoveOption(-2, -1, 1));
 		
 		this.firstMoveDone = false;
 	}
