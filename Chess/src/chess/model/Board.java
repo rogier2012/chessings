@@ -24,6 +24,10 @@ public class Board {
 	private List<Pawn> whitePawnList;
 	private List<Pawn> blackPawnList;
 	private List<King> kingList;
+	private List<Queen> queenList;
+	private List<Bishop> bishopList;
+	private List<Knight> knightList;
+	private List<Rook> rookList;
 	
 	private byte[][] fields;
 	
@@ -36,6 +40,10 @@ public class Board {
 		this.whitePawnList = new ArrayList<Pawn>(FILES);
 		this.blackPawnList = new ArrayList<Pawn>(FILES);
 		this.kingList = new ArrayList<King>(Game.PLAYERAMOUNT);
+		this.queenList = new ArrayList<Queen>(Game.PLAYERAMOUNT);
+		this.bishopList = new ArrayList<Bishop>(2*Game.PLAYERAMOUNT);
+		this.knightList = new ArrayList<Knight>(2*Game.PLAYERAMOUNT);
+		this.rookList = new ArrayList<Rook>(2*Game.PLAYERAMOUNT);
 	}
 	
 	/*
@@ -168,6 +176,38 @@ public class Board {
 
 	public void setKingList(List<King> kingList) {
 		this.kingList = kingList;
+	}
+
+	public List<Queen> getQueenList() {
+		return queenList;
+	}
+
+	public void setQueenList(List<Queen> queenList) {
+		this.queenList = queenList;
+	}
+
+	public List<Bishop> getBishopList() {
+		return bishopList;
+	}
+
+	public void setBishopList(List<Bishop> bishopList) {
+		this.bishopList = bishopList;
+	}
+
+	public List<Knight> getKnightList() {
+		return knightList;
+	}
+
+	public void setKnightList(List<Knight> knightList) {
+		this.knightList = knightList;
+	}
+
+	public List<Rook> getRookList() {
+		return rookList;
+	}
+
+	public void setRookList(List<Rook> rookList) {
+		this.rookList = rookList;
 	}
 
 }

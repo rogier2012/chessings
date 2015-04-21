@@ -1,11 +1,14 @@
 package chess;
 
-import chess.model.*;
-import chess.model.players.*;
 import chess.controller.BoardController;
+import chess.controller.GameController;
+import chess.model.Board;
+import chess.model.Color;
+import chess.model.Game;
+import chess.model.players.ComputerPlayer;
+import chess.model.players.HumanPlayer;
+import chess.model.strategies.TestStrategy;
 import chess.view.BoardView;
-import chess.controller.*;
-import chess.model.strategies.*;
 
 public class PlayChess {
 
