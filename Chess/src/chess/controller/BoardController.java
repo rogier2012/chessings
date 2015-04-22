@@ -6,11 +6,13 @@ import chess.model.Game;
 import chess.model.Position;
 import chess.model.moves.Move;
 import chess.model.pieces.Bishop;
+import chess.model.pieces.ChessPiece;
 import chess.model.pieces.King;
 import chess.model.pieces.Knight;
 import chess.model.pieces.Pawn;
 import chess.model.pieces.Queen;
 import chess.model.pieces.Rook;
+import chess.view.BoardView;
 
 public class BoardController {
 	
@@ -233,16 +235,13 @@ public class BoardController {
 	 */
 	public void executeMoveInLists(Position oldPosition, Position newPosition, Board board)	{
 		byte bPiece = board.getPiece(oldPosition);
+		System.out.println("Byte: " + bPiece);
+		BoardView b = new BoardView();	
+		b.toString(board);
 		
-		// Look for the list which has to be altered 
-		
-		// Look in the list which piece has to be moved
-		
-		// Alter piece position
-		
-		// Alter piece specific instance variables (e.g. boolean firstMoveDone)
-		
-		//TODO
+		ChessPiece piece = board.getChessPiece(bPiece, oldPosition);
+		piece.setPosition(newPosition);
+		// Alter piece specific instance variables (e.g.  boolean firstmovedone)? TODO
 	}
 	
 }

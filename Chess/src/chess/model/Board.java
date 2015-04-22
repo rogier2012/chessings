@@ -116,7 +116,6 @@ public class Board {
 	 */
 	public ChessPiece getChessPiece(byte bPiece, Position position){
 		Color color = (bPiece%2 == 1)? Color.WHITE : Color.BLACK;
-		// Is it a pawn?
 		if (bPiece == BoardController.WHITEPAWN || bPiece == BoardController.BLACKPAWN)	{
 			// Which pawn list should be searched?
 			if (color == Color.WHITE)	{
@@ -135,17 +134,45 @@ public class Board {
 		// Is it a king?
 		} else if (bPiece == BoardController.WHITEKING || bPiece == BoardController.BLACKKING)	{
 			for (King king : this.kingList)	{
-				System.out.println(king.getPosition().toString()  + " : " + position.toString());
 				if (king.getPosition().getRank() == position.getRank() && king.getPosition().getFile() == position.getFile())	{
 					return king;
 				}
 			}
+		// Queen?	
+		} else if(bPiece == BoardController.WHITEQUEEN || bPiece == BoardController.BLACKQUEEN)	{
+			for (Queen queen : this.queenList)	{
+				if (queen.getPosition().getRank() == position.getRank() && queen.getPosition().getFile() == position.getFile())	{
+					return queen;
+				}
+			}
+		// Bishop?	
+		} else if(bPiece == BoardController.WHITEBISHOP || bPiece == BoardController.BLACKBISHOP)	{
+			for (Bishop bishop : this.bishopList)	{
+				if (bishop.getPosition().getRank() == position.getRank() && bishop.getPosition().getFile() == position.getFile()){
+					return bishop;
+				}
+			}
 			
-			
-			
+		// Knight?
+		} else if(bPiece == BoardController.WHITEKNIGHT || bPiece == BoardController.BLACKKNIGHT)	{
+			for (Knight knight : this.knightList)	{
+				if (knight.getPosition().getRank() == position.getRank() && knight.getPosition().getFile() == position.getFile())	{
+					return knight;
+				}
+			}	
+		// Rook?	
+		} else if(bPiece == BoardController.WHITEROOK || bPiece == BoardController.BLACKROOK)	{
+			for (Rook rook: this.rookList)	{
+				if (rook.getPosition().getRank() == position.getRank() && rook.getPosition().getFile() == position.getFile())	{
+					return rook;
+				}
+			}
+		} else if (bPiece == BoardController.EMPTY)	{
+			System.out.println("You can't move an empty field!");
 		}
-
-		return null; // TODO
+		// None of the above
+		System.out.println("No valid byte piece representation given to Board.getChessPiece()!!");
+		return null;  
 	}
 	
 	/*

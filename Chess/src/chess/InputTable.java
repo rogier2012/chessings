@@ -17,7 +17,7 @@ public class InputTable {
 	
 	public void fillRanks(){
 		for (int i = 1; i <= Board.RANKS; i++){
-			ranks.put(i, i - 1);
+			ranks.put(i, i - 1); // TODO 
 		}
 	}
 	

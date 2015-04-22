@@ -3,6 +3,7 @@ package chess.controller;
 import chess.model.*;
 import chess.model.moves.*;
 import chess.model.players.*;
+import chess.view.BoardView;
 
 public class GameController {
 	

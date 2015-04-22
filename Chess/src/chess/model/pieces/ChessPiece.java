@@ -70,4 +70,8 @@ public abstract class ChessPiece {
 	public void setMoveOptions(List<MoveOption> moveOptions) {
 		this.moveOptions = moveOptions;
 	}
+
+	public void setPosition(Position position) {
+		this.position = position;
+	}
 }
