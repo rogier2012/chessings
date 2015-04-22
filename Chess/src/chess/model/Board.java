@@ -186,6 +186,10 @@ public class Board {
 	public void setPiece(int rank, int file, byte piece)	{
 		this.fields[rank][file] = piece;
 	}
+	
+	public void setPiece(Position position, byte piece) {
+		this.fields[position.getRank()][position.getFile()] = piece;
+	}
 
 	public List<Pawn> getWhitePawnList()	{
 		return this.whitePawnList;

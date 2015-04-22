@@ -212,36 +212,10 @@ public class BoardController {
 	 * Executes a move in board. Even if it is invalid.
 	 */
 	public void executeMove(Move move, Board board)	{
-		executeMoveInFields(move.getInitial(), move.getEnd(), board);
-		executeMoveInLists(move.getInitial(), move.getEnd(), board);
+		byte bPiece = board.getPiece(move.getInitial());
+		board.setPiece(move.getEnd(), bPiece);
+		board.setPiece(move.getInitial(), (byte) 0);;
+		ChessPiece piece = board.getChessPiece(bPiece, move.getInitial());
+		piece.setPosition(move.getEnd());
 	}
-	
-	
-	/**
-	 * Executes a move in the fields matrix in board. Even if it is invalid.
-	 * IMPORTANT: EXECUTE THIS AFTER CHANGING THE LISTS
-	 */
-	public void executeMoveInFields(Position oldPosition, Position newPosition, Board board)	{
-		byte piece = board.getPiece(oldPosition);
-		board.setPiece(newPosition.getRank(), newPosition.getFile(), piece);
-		
-		// Oude positie wel verwijderen!
-		board.setPiece(oldPosition.getRank(), oldPosition.getFile(), (byte) 0);
-	}
-	
-	/**
-	 * Executes a move in the set representation of board. Even if it is invalid.
-	 * IMPORTANT: EXECUTE THIS BEFORE CHANGING FIELDS
-	 */
-	public void executeMoveInLists(Position oldPosition, Position newPosition, Board board)	{
-		byte bPiece = board.getPiece(oldPosition);
-		System.out.println("Byte: " + bPiece);
-		BoardView b = new BoardView();	
-		b.toString(board);
-		
-		ChessPiece piece = board.getChessPiece(bPiece, oldPosition);
-		piece.setPosition(newPosition);
-		// Alter piece specific instance variables (e.g.  boolean firstmovedone)? TODO
-	}
-	
 }
