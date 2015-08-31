@@ -13,18 +13,12 @@ import game.Game;
 public class CastlingLong extends Castling {
 	
 	/*
-	 * Instance Variables
-	 */
-	
-	public Color color;
-	
-	/*
 	 * Constructors
 	 */
 	
 	public CastlingLong(Color color)	{
 		super(color);
-		this.color = color;
+		this.setColor(color);
 		this.setDirection(new int[] { 0, 3 });
 	}
 	
@@ -66,12 +60,5 @@ public class CastlingLong extends Castling {
 		return result;
 	}
 	
-	/*
-	 * Getters and Setters
-	 */
 	
-	public Color getColor() {
-		return color;
-	}
-
 }

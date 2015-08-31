@@ -4,7 +4,7 @@ import enums.Color;
 
 public abstract class Castling extends MoveOption {
 	
-	public Color color;
+	private Color color;
 	
 	public Castling(Color color) {
 		super(color);
@@ -15,6 +15,10 @@ public abstract class Castling extends MoveOption {
 	
 	public Color getColor() {
 		return color;
+	}
+	
+	public void setColor(Color color)	{
+		this.color = color;
 	}
 
 }
