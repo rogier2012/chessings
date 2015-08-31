@@ -13,13 +13,19 @@ import game.Game;
 public class CastlingShort extends Castling {
 	
 	/*
+	 * Constants
+	 */
+	
+	private static final int[] DIRECTION = new int[]{0, -2};
+	
+	/*
 	 * Constructors
 	 */
 	
 	public CastlingShort(Color color)	{
 		super(color);
 		this.setColor(color);
-		this.setDirection(new int[] { 0, -2 });
+		this.setDirection(DIRECTION);
 	}
 	
 	/*
