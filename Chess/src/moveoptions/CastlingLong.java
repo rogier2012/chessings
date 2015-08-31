@@ -27,25 +27,25 @@ public class CastlingLong extends Castling {
 	 */
 	
 	@Override
-	public boolean specificRequirementsAreMet(Game game, MoveSuggestion suggestion)	{ // TODO -- rook positions hardcoded
+	public boolean specificRequirementsAreMet(Game game, MoveSuggestion suggestion)	{
 		boolean result = true;
 		// Space between King and Rook is clear
 		if (this.getColor() == Color.WHITE){
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, 4));
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, 5));
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, 6));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, ChessBoard.QUEENFILE));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, ChessBoard.RIGHTBISHOPFILE));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, ChessBoard.RIGHTKNIGHTFILE));
 			if (result)	{
-				ChessPiece rook = game.getBoard().getChessPiece(new Square(0, 7));
+				ChessPiece rook = game.getBoard().getChessPiece(new Square(ChessBoard.WHITEPIECERANK, ChessBoard.RIGHTROOKFILE));
 				result = result && rook instanceof Rook;
 				result = result && rook.getColor() == Color.WHITE;
 			}
 			
 		} else if (this.getColor() == Color.BLACK)	{
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, 4));
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, 5));
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, 6));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, ChessBoard.QUEENFILE));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, ChessBoard.RIGHTBISHOPFILE));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, ChessBoard.RIGHTKNIGHTFILE));
 			if (result)	{
-				ChessPiece rook = game.getBoard().getChessPiece(new Square(7, 7));
+				ChessPiece rook = game.getBoard().getChessPiece(new Square(ChessBoard.BLACKPIECERANK, ChessBoard.RIGHTROOKFILE));
 				result = result && rook instanceof Rook;
 				result = result && rook.getColor() == Color.BLACK;
 			}
@@ -56,8 +56,7 @@ public class CastlingLong extends Castling {
 	
 	@Override
 	public Move generateMove(MoveSuggestion suggestion) {
-		CastleLong result = new CastleLong(suggestion.getOrigin(), suggestion.getDestination());
-		return result;
+		return new CastleLong(suggestion.getOrigin(), suggestion.getDestination());
 	}
 	
 	

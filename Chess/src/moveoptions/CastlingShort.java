@@ -27,24 +27,24 @@ public class CastlingShort extends Castling {
 	 */
 	
 	@Override
-	public boolean specificRequirementsAreMet(Game game, MoveSuggestion suggestion)	{ // TODO -- Rook positions hardcoded
+	public boolean specificRequirementsAreMet(Game game, MoveSuggestion suggestion)	{
 		boolean result = true;
 		// Space between King and Rook is clear
 		if (this.getColor() == Color.WHITE){
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, 1));
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, 2));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, ChessBoard.LEFTKNIGHTFILE));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.WHITEPIECERANK, ChessBoard.LEFTBISHOPFILE));
 			if (result)	{
-				ChessPiece rook = game.getBoard().getChessPiece(new Square(0, 0));
+				ChessPiece rook = game.getBoard().getChessPiece(new Square(ChessBoard.WHITEPIECERANK, ChessBoard.LEFTROOKFILE));
 				result = result && rook instanceof Rook;
 				result = result && rook.getColor() == Color.WHITE;
 			}
 			
 		} else if (this.getColor() == Color.BLACK)	{
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, 1));
-			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, 2));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, ChessBoard.LEFTKNIGHTFILE));
+			result = result && !game.getBoard().isOccupied(new Square(ChessBoard.BLACKPIECERANK, ChessBoard.LEFTBISHOPFILE));
 			
 			if (result)	{
-				ChessPiece rook = game.getBoard().getChessPiece(new Square(7, 0));
+				ChessPiece rook = game.getBoard().getChessPiece(new Square(ChessBoard.BLACKPIECERANK, ChessBoard.LEFTROOKFILE));
 				result = result && rook instanceof Rook;
 				result = result && rook.getColor() == Color.BLACK;
 			}
@@ -54,8 +54,7 @@ public class CastlingShort extends Castling {
 	
 	@Override
 	public Move generateMove(MoveSuggestion suggestion) {
-		CastleShort result = new CastleShort(suggestion.getOrigin(), suggestion.getDestination());
-		return result;
+		return new CastleShort(suggestion.getOrigin(), suggestion.getDestination());
 	}
 	
 	
