@@ -13,6 +13,10 @@ import pieces.Queen;
 import pieces.Rook;
 import enums.Color;
 
+/**
+ * Purely square-centric implementation. Very inefficient.
+ * @author Ron
+ */
 public class SquareCentricBoard implements ChessBoard {
 	
 	/*
@@ -46,6 +50,22 @@ public class SquareCentricBoard implements ChessBoard {
 			}
 		}
 		return null;
+	}
+
+	@Override
+	public King getKing(Color color) {
+		King result = null;
+		squareIteration:
+		for (int rank = 0; rank < RANKS; rank++)	{
+			for (int file = 0; file < FILES; file++)	{
+				ChessPiece toCheck = board[rank][file];
+				if (toCheck instanceof King && toCheck.getColor() == color)	{
+					result = (King) toCheck;
+					break squareIteration;
+				}
+			}
+		}
+		return result;
 	}
 
 	@Override
@@ -158,5 +178,6 @@ public class SquareCentricBoard implements ChessBoard {
 		}
 
 	}
+
 	
 }

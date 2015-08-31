@@ -3,6 +3,7 @@ package board;
 import java.util.ArrayList;
 
 import pieces.ChessPiece;
+import pieces.King;
 import enums.Color;
 
 public interface ChessBoard {
@@ -57,6 +58,8 @@ public interface ChessBoard {
 	public ChessPiece getChessPiece(Square position);
 	
 	public Square getPosition(ChessPiece piece);
+	
+	public King getKing(Color color);
 	
 	public boolean isOccupied(Square position);
 	

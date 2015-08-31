@@ -8,6 +8,7 @@ import moves.Move;
 public interface MoveMapping {
 	
 	/**
+	 * Removes piece from mapping if it is captured
 	 * Removes move options from pieces if the move dictates this (e.g. castling removed after king movement)
 	 * @param move -- move that was just done
 	 */

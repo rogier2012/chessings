@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import board.ChessBoard;
 import board.Square;
 import pieces.ChessPiece;
+import pieces.King;
 import enums.Color;
 
 public class StandardBoard implements ChessBoard {
@@ -61,6 +62,12 @@ public class StandardBoard implements ChessBoard {
 	public void reset() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public King getKing(Color color) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
