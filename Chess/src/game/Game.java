@@ -1,5 +1,6 @@
 package game;
 
+import game.history.GameHistory;
 import moves.Move;
 import players.Player;
 import board.ChessBoard;
@@ -27,6 +28,10 @@ public interface Game {
 	public ChessBoard getBoard();
 	
 	public Player[] getPlayers();
+	
+	public GameHistory getHistory();
+	
+	public int getMoveIndex();
 	
 	/*
 	 * Commands

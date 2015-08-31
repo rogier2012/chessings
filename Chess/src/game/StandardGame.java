@@ -97,6 +97,16 @@ public class StandardGame implements Game {
 	public Player[] getPlayers() {
 		return this.players;
 	}
+	
+	@Override
+	public GameHistory getHistory()	{
+		return this.history;
+	}
+	
+	@Override
+	public int getMoveIndex()	{
+		return this.moveCounter.getCount();
+	}
 
 	@Override
 	public void play() {
