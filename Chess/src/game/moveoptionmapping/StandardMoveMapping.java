@@ -257,6 +257,34 @@ public class StandardMoveMapping implements MoveMapping {
 	}
 	
 	/*
+	 * Queries
+	 */
+	
+	@Override
+	public HashSet<MoveOption> getOptions(ChessPiece piece)	{
+		return this.map.get(piece);
+	}
+	
+	@Override
+	public HashSet<MoveOption> getColorOptions(Color color)	{
+		HashSet<MoveOption> result = new HashSet<MoveOption>();
+		for (ChessPiece piece : this.board.getAllChessPiecesOf(color))	{
+			result.addAll(this.map.get(piece));
+		}
+		return result;
+	}
+	
+	@Override
+	public HashSet<MoveOption> getAllOptions()	{
+		HashSet<MoveOption> result = new HashSet<MoveOption>();
+		for (ChessPiece piece : this.map.keySet())	{
+			result.addAll(this.map.get(piece));
+		}
+		return result;
+	}
+	
+	
+	/*
 	 * Commands
 	 */
 	
