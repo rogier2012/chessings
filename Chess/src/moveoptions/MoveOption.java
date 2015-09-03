@@ -63,6 +63,13 @@ public abstract class MoveOption { // TODO Comment help methods!
 	 * Queries
 	 */
 	
+	@Override
+	public String toString()	{
+		String result = "";
+		result += this.getClass() + "  " + this.direction[0] + ", " + this.direction[1] + " range: " + this.range;
+		return result;
+	}
+	
 	public Move getMove(MoveSuggestion suggestion, Game game)	{
 		Move result = null;
 		boolean valid = this.requirementsAreMet(game, suggestion);

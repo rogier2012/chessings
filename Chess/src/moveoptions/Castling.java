@@ -13,6 +13,11 @@ public abstract class Castling extends MoveOption {
 		this.setRange(1);
 	}
 	
+	@Override
+	public String toString()	{
+		return "" + this.getClass();
+	}
+	
 	public Color getColor() {
 		return color;
 	}
