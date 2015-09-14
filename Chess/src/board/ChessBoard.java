@@ -1,6 +1,6 @@
 package board;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import pieces.ChessPiece;
 import pieces.King;
@@ -65,7 +65,7 @@ public interface ChessBoard {
 	
 	public boolean isOccupiedBy(Color color, Square position);
 	
-	public ArrayList<ChessPiece> getAllChessPiecesOf(Color color);
+	public List<ChessPiece> getAllChessPiecesOf(Color color);
 	
 	public ChessBoard deepCopy();
 	

@@ -1,8 +1,8 @@
 package game.moveoptionmapping;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 import moveoptions.Castling;
 import moveoptions.CastlingLong;
@@ -238,8 +238,8 @@ public class StandardMoveMapping implements MoveMapping {
 	 * Instance Variables
 	 */
 	
-	private ArrayList<ChessPiece> whitePieces;
-	private ArrayList<ChessPiece> blackPieces;
+	private List<ChessPiece> whitePieces;
+	private List<ChessPiece> blackPieces;
 	private ChessBoard board;
 	
 	private HashMap<ChessPiece, HashSet<MoveOption>> map;

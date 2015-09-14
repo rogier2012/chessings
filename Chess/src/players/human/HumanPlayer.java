@@ -1,6 +1,6 @@
 package players.human;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import moves.Move;
 import moves.MoveSuggestion;
@@ -23,7 +23,7 @@ public class HumanPlayer extends Player {
 	}
 	
 	@Override
-	public TurnInput determineMove(ArrayList<Move> options, Game game) {
+	public TurnInput determineMove(List<Move> options, Game game) {
 		TurnInput input = null;
 		boolean valid = false;
 		while (!valid)	{

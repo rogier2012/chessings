@@ -1,6 +1,6 @@
 package game.history;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import moves.Move;
 import board.ChessBoard;
@@ -29,12 +29,12 @@ public interface GameHistory {
 	/**
 	 * @return -- All board configurations that occurred this game, in chronological order
 	 */
-	public ArrayList<ChessBoard> getAllBoards();
+	public List<ChessBoard> getAllBoards();
 	
 	/**
 	 * @return -- All moves executed during this game, in chronological order
 	 */
-	public ArrayList<Move> getAllMoves();
+	public List<Move> getAllMoves();
 	
 	/*
 	 * Commands

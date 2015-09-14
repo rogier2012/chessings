@@ -1,6 +1,6 @@
 package players;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import moves.Move;
 import players.playerinput.input.AgreementInput;
@@ -32,7 +32,7 @@ public abstract class Player {
 	 * Queries
 	 */
 	
-	public abstract TurnInput determineMove(ArrayList<Move> options, Game game);
+	public abstract TurnInput determineMove(List<Move> options, Game game);
 	
 	public abstract PromotionInput determinePromotion(Square position, Game game);
 	

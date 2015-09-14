@@ -11,7 +11,7 @@ import game.promotioncheck.PromotionCheck;
 import game.promotioncheck.StandardPromotionCheck;
 import game.repetitionchecker.RepetitionChecker;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import moves.Move;
 import players.Player;
@@ -116,7 +116,7 @@ public class StandardGame implements Game {
 		while (continueGame)	{
 			Player currentPlayer = this.getCurrentPlayer();										/* Get current player					 */
 			this.view.showBoard(currentPlayer.getColor());										/* Show current board					 */
-			ArrayList<Move> movePossibilities = this.moveGenerator.getValidMoves();				/* Determine all possible moves			 */
+			List<Move> movePossibilities = this.moveGenerator.getValidMoves();				/* Determine all possible moves			 */
 			
 			if (movePossibilities.size() == 0)	{												/* If there are no possible moves:		 */
 				if (this.checkCheck.isKingInCheck(currentPlayer.getColor()))	{				/* 		and the king is in check		 */

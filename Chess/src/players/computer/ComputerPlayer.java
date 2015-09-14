@@ -1,6 +1,6 @@
 package players.computer;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import moves.Move;
 import players.Player;
@@ -39,7 +39,7 @@ public class ComputerPlayer extends Player {
 	 */
 	
 	@Override
-	public TurnInput determineMove(ArrayList<Move> options, Game game) {
+	public TurnInput determineMove(List<Move> options, Game game) {
 		/*
 		 * Computer players don't resign or propose remise. 
 		 */

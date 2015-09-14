@@ -4,7 +4,7 @@ import enums.Color;
 import game.moveoptionmapping.MoveMapping;
 import game.moveoptionmapping.StandardMoveMapping;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import moveoptions.MoveOption;
@@ -55,8 +55,8 @@ public class MoveOptionMappingTest {
 	 */
 	
 	private void showOptions()	{
-		ArrayList<ChessPiece> whitePieces = board.getAllChessPiecesOf(Color.WHITE);
-		ArrayList<ChessPiece> blackPieces = board.getAllChessPiecesOf(Color.BLACK);
+		List<ChessPiece> whitePieces = board.getAllChessPiecesOf(Color.WHITE);
+		List<ChessPiece> blackPieces = board.getAllChessPiecesOf(Color.BLACK);
 		System.out.println("Showing all options of all pieces");
 		System.out.println("Total pieces amount: " + (this.board.getAllChessPiecesOf(Color.WHITE).size() + this.board.getAllChessPiecesOf(Color.BLACK).size()));
 		System.out.println("Total options amount: " + this.mapping.getAllOptions().size());
