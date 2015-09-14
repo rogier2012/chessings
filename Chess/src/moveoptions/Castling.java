@@ -9,7 +9,6 @@ public abstract class Castling extends MoveOption {
 	public Castling(Color color) {
 		super(color);
 		this.color = color;
-		this.setRepeatable(false);
 		this.setRange(1);
 	}
 	

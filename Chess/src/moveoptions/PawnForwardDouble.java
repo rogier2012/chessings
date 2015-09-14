@@ -17,7 +17,6 @@ public class PawnForwardDouble extends MoveOption {
 			this.setDirection(new int[]{-2, 0});
 		}
 		this.setRange(1);
-		this.setRepeatable(false);
 	}
 
 	public boolean specificRequirementsAreMet(Game game, MoveSuggestion move) {

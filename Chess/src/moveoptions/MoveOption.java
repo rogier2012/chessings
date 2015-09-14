@@ -36,11 +36,6 @@ public abstract class MoveOption { // TODO Comment help methods!
 	 */
 	private boolean canJump;
 	
-	/**
-	 * boolean isRepeatable -- Can this MoveOption be used in multiple turns?
-	 */
-	private boolean isRepeatable;
-	
 	/*
 	 * Constructors
 	 */
@@ -48,14 +43,12 @@ public abstract class MoveOption { // TODO Comment help methods!
 	public MoveOption(int rankStep, int fileStep, int range)	{
 		this.direction = new int[]{rankStep, fileStep};
 		this.range = range;
-		this.isRepeatable = true;
 		this.canJump = false;
 	}
 	
 	public MoveOption(Color color)	{
 		this.direction = new int[]{0, 0};
 		this.range = 0;
-		this.isRepeatable = true;
 		this.canJump = false;
 	}
 
@@ -270,14 +263,6 @@ public abstract class MoveOption { // TODO Comment help methods!
 
 	public void setRange(int range) {
 		this.range = range;
-	}
-
-	public boolean isRepeatable() {
-		return isRepeatable;
-	}
-
-	public void setRepeatable(boolean isRepeatable) {
-		this.isRepeatable = isRepeatable;
 	}
 
 	public boolean canJump() {
